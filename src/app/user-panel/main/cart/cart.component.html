@@ -1,0 +1,44 @@
+<app-nav></app-nav>
+<main id="cart">
+
+  <section class="data p-5">
+      <table class="table table-striped table-resposive">
+          <thead>
+              <tr>
+                  <th scope="col">Product</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Quantity</th>
+                  <th scope="col">Subtotal</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let cart of cart">
+                  <th class="th-f">
+                      <img class="img-fluid" src="{{cart.image}}" alt="" />
+                      <p class="text-danger">{{cart.name}}</p>
+                  </th>
+                  <td class="text-danger fw-bold">{{cart.price}}$</td>
+                  <td class="text-danger fw-bold">{{cart.quantity}}</td>
+                  <td class="text-danger fw-bold">{{cart.subTotal}}$</td>
+              </tr>
+          </tbody>
+      </table>
+      <div class="btns">
+          <button class="btn1">Return To Shop</button>
+      </div>
+      <div class="copun mt-5">
+          <div class="d-flex justify-content-between">
+              <div class="rit">
+                  <input type="text" placeholder="Coupon Code" >
+                  <button class="btn-cop">Apply Coupon</button>
+              </div>
+
+          </div>
+      </div>
+  </section>
+  <section class="copun mt-4">
+
+  </section>
+
+</main>
+<app-footer></app-footer>

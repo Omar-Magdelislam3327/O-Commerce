@@ -1,0 +1,39 @@
+<app-nav></app-nav>
+<main id="allproducts">
+  <section class="prod pt-5">
+      <div class="container">
+          <div class="title">
+              <h6>All Products</h6>
+              <div class="flash d-flex align-items-center gap-3 mt-4">
+                  <h3>All You Need Is Here</h3>
+              </div>
+          </div>
+          <div class="row mt-3 align-items-center gap-4 ">
+              <div class="carde col-xl-3 col-lg-6 col-md-6 col-sm-12 m-0 my-3" *ngFor="let product of products">
+                  <div class="back text-center">
+                      <img class="img-fluid" src="{{product.image}}" alt="">
+                  </div>
+                  <div class="new">
+                    <p>{{product.labelps}}</p>
+                </div>
+                  <div class="show">
+                      <a routerLink="/details/{{product.id}}"><i class="fa-solid fa-eye"></i></a>
+                  </div>
+                  <h5 class="p-0 m-0 mt-2">{{product.name}}</h5>
+                  <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="lower d-flex justify-content-between align-items-center">
+                    <p class="p-0 m-0 text-danger fw-bold">{{product.price}}$<span></span></p>
+                    <i class="fa-solid fa-cart-plus"></i>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+</main>
+<app-footer></app-footer>

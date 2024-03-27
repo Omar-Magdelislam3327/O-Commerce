@@ -1,0 +1,69 @@
+<app-nav></app-nav>
+<main id="contact">
+  <!--  -->
+  <section class="up">
+      <div class="container">
+          <div class="row">
+              <div aria-label="breadcrumb ">
+                  <ol class="breadcrumb pt-5 p-0 m-0">
+                      <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                  </ol>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!--  -->
+  <div class="container">
+      <div class="row justify-content-around gap-5 mt-5">
+          <div class="lft col-lg-3 col-12">
+              <div class="up">
+                  <div class="title d-flex align-items-center gap-3">
+                      <i class="fs-5 fa-solid fa-phone"></i>
+                      <h5>Call Us</h5>
+                  </div>
+                  <div class="txt">
+                      <p class="mt-2 m-0 p-0">We are available 24/7, 7 days a week.</p>
+                      <p class="mt-2 m-0 p-0">Phone: +20150883344</p>
+                  </div>
+              </div>
+              <hr>
+              <div class="down">
+                  <div class="title d-flex align-items-center gap-3">
+                      <i class="fs-5 fa-regular fa-envelope"></i>
+                      <h5>Write To Us</h5>
+                  </div>
+                  <div class="txt">
+                      <p class="mt-2 m-0 p-0">Fill out our form and we will contact you within 24 hours.</p>
+                      <p class="mt-2 m-0 p-0">Emails: customer@swiftcart.com</p>
+                      <p class="mt-2 m-0 p-0">Emails: support@swiftcart.com</p>
+                  </div>
+              </div>
+          </div>
+          <div class="rit col-lg-8 col-12">
+              <form class="row g-3 needs-validation" novalidate>
+                  <div class="col-md-4">
+                      <input type="text" placeholder="*Your Name"  class="form-control" #name="ngModel" [(ngModel)]="message.name" name="name" id="name">
+                  </div>
+                  <div class="col-md-4">
+                      <input type="text" placeholder="*Your Email" class="form-control" #email="ngModel" [(ngModel)]="message.email" name="email" id="email">
+                  </div>
+                  <div class="col-md-4">
+                      <input type="text" placeholder="*Your Phone" class="form-control" #phone="ngModel" [(ngModel)]="message.phone" name="phone" id="phone">
+                  </div>
+
+                  <div class="col-md-12">
+                      <textarea cols="20" rows="7" placeholder="Your Message" class="form-control" #messagee="ngModel" [(ngModel)]="message.message" name="messagee" id="messagee"></textarea>
+                  </div>
+
+                  <div class="col-12 text-end">
+                      <button class="btn btn-danger" (click)="sendMessage()" type="submit">Send Message</button>
+                  </div>
+              </form>
+          </div>
+
+      </div>
+  </div>
+  <!--  -->
+</main>
+<app-footer></app-footer>

@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+<div class="container py-4 col-lg-6 col-md-8 col-sm-10 col-12">
+  <div class="card bg-dark text-light">
+    <div class="card-body">
+      <h2 class="text-success text-center">Update Product</h2>
+      <form>
+        <div class="form-group mt-2">
+          <label class="form-label">Product's Name</label>
+          <input #name="ngModel" [(ngModel)]="product.name" type="text" class="form-control shadow-none" name="name" id="name" placeholder="Enter Product Name" required />
+        </div>
+        <!--  -->
+          <div class="form-group mt-2">
+            <label class="form-label">Product's Price</label>
+            <input #price="ngModel" [(ngModel)]="product.price" type="text" class="form-control shadow-none" name="price" id="price" placeholder="Enter Price" required />
+          </div>
+          <!--  -->
+        <div class="form-group mt-2 ">
+          <label class="form-label">Product's Image</label>
+          <input #image="ngModel" [(ngModel)]="product.image" type="url" class="form-control shadow-none" name="image" id="image" placeholder="Enter Product Image URL" required />
+        </div>
+        <!--  -->
+        <div class="form-group mt-2">
+            <label class="form-label">Product's Category</label>
+            <input #old="ngModel" [(ngModel)]="product.category" type="text" class="form-control" name="category" id="category" placeholder="Enter Category" required />
+        </div>
+        <!--  -->
+        <div class="form-group mt-2">
+          <label class="form-label">Product's Label</label>
+          <input #old="ngModel" [(ngModel)]="product.labelps" type="text" class="form-control shadow-none" name="labelps"
+            id="labelps" placeholder="Enter Label" required />
+        </div>
+        <!--  -->
+        <div class="form-group mt-2 ">
+          <label class="form-label">Product's Description</label>
+          <textarea #description="ngModel" [(ngModel)]="product.description" class="form-control shadow-none" id="description" name="description" cols="30" rows="5" placeholder="Description" required> </textarea>
+        </div>
+        <!--  -->
+        <div class="form-group mt-2 text-center">
+          <button (click)="update()"  type="submit" class="btn btn-warning">Update Product</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

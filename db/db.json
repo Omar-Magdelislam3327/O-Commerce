@@ -1,0 +1,98 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Gucci duffle bag",
+      "price": " 950.00",
+      "image": "assets/vendors/imgs/Gucci-Savoy-medium-duffle-bag-1.png",
+      "category": "Women's Accessories",
+      "labelps": "Top Selling",
+      "description": "Savoy Small GG Supreme duffle bag in multicoloured - Gucci | Mytheresa. A historic interpretation of founder Guccio Gucci's initials, GG Supreme canvas is a key fabric at the house of Gucci. It's the foundation for the Savoy Small duffle bag, along with the iconic Web stripe, leather trims, and gold-toned GG hardware."
+    },
+    {
+      "id": 2,
+      "name": "HAVIT HV-G92 Gamepad",
+      "price": " 50.00",
+      "image": "assets/vendors/imgs/image 63.png",
+      "category": "Gaming",
+      "labelps": "New"
+    },
+    {
+      "id": 3,
+      "name": "ASUS FHD Gaming Laptop",
+      "price": " 750.00",
+      "image": "assets/vendors/imgs/Cart (2).png",
+      "category": "Electronics",
+      "labelps": "New"
+    },
+    {
+      "id": 4,
+      "name": "IPS LCD Gaming Monitor",
+      "price": " 1266.00",
+      "image": "assets/vendors/imgs/Frame 613.png",
+      "category": "Electronics",
+      "labelps": "New"
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 6
+    }
+  ],
+  "carts": [
+    {
+      "id": 1,
+      "name": "Gucci duffle bag",
+      "price": " 950.00",
+      "image": "assets/vendors/imgs/Gucci-Savoy-medium-duffle-bag-1.png",
+      "quantity": 1,
+      "subTotal": 650
+    },
+    {
+      "id": 2,
+      "name": "Gucci duffle bag",
+      "price": " 950.00",
+      "image": "assets/vendors/imgs/Gucci-Savoy-medium-duffle-bag-1.png",
+      "quantity": 1,
+      "subTotal": 950
+    }
+  ],
+  "sales": [
+    {
+      "id": 1,
+      "name": "HAVIT HV-G92 Gamepad",
+      "price": " 120.00",
+      "oldPrice": " 160.50",
+      "image": "assets/vendors/imgs/Frame 570.png",
+      "discount": "20",
+      "description": "gggghjnbghjnbvghbvgtyuj",
+      "category": "gaming"
+    },
+    {
+      "id": 2,
+      "name": "Cannon n98 Camera",
+      "price": " 260.00",
+      "oldPrice": " 390.50",
+      "image": "assets/vendors/imgs/Cart (1).png",
+      "discount": "30"
+    },
+    {
+      "id": 3,
+      "name": "ASUS FHD Gaming Laptop",
+      "price": " 750.00",
+      "oldPrice": " 910.50",
+      "image": "assets/vendors/imgs/Cart (2).png",
+      "discount": "40"
+    },
+    {
+      "id": 4,
+      "name": "S-Series Comfort Chair",
+      "price": " 160.00",
+      "oldPrice": " 320.00",
+      "image": "assets/vendors/imgs/sam-moghadam-khamseh-kvmdsTrGOBM-unsplash 1.png",
+      "discount": "50"
+    }
+  ],
+  "feedback": []
+}

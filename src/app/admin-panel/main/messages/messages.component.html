@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+<div class="container py-5">
+  <div class="card bg-danger text-light">
+    <div class="card-body table-responsive">
+      <table class="table table-danger table-striped">
+        <thead>
+          <tr>
+            <th>User ID</th>
+            <th>User Name</th>
+            <th>User Phone</th>
+            <th>User email</th>
+            <th>User Message</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let Message of message">
+            <td>{{Message.id}}</td>
+            <td>{{Message.name}}</td>
+            <td>{{Message.phone}}</td>
+            <td>{{Message.email}}</td>
+            <td>{{Message.message}}</td>
+            <td>
+              <button (click)="remove(Message.id)" class="btn"><i class="fa-solid fa-circle-check fs-4 text-success"></i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
