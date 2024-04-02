@@ -41,13 +41,18 @@ nav {
       color: #7D8184;
   }
 
-  & .icon-cart {
-      position: relative;
-  }
+
 
   & i {
       font-size: 25px;
-
+      color: var(--primary);
+      background-color: #e0757536;
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
   }
 
   & span {

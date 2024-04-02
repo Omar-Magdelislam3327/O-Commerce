@@ -26,21 +26,13 @@
                           </div>
                       </div>
                   </div>
-                  <div class="row2 d-flex gap-5 mt-3 flex-wrap">
-                      <div class="counter-container">
-                          <div class="counter">
-                              <button id="decreaseBtn">-</button>
-                              <span id="countLabel">1</span>
-                              <button id="increaseBtn">+</button>
-                          </div>
-                      </div>
-                      <div class="btnn">
-                          <button class="btn btn-danger">Buy Now</button>
-                      </div>
-                      <div class="btnn">
-                          <button class="btn btn-success">Add to cart</button>
-                      </div>
-                  </div>
+                  <div class="row2 d-flex gap-5 mt-3 ">
+                    <input type="number" #quantity="ngModel" [(ngModel)]="sale.quantity" name="quantity" id="quantity" value="1" min="1" max="10"/>
+                    <div class="btnn">
+                        <button class="btn btn-success" (click)="addToCart(sale.id)">Add to cart</button>
+                    </div>
+                </div>
+
                   <div class="delivery mt-3">
                       <div class="one d-flex align-items-center gap-4 ps-3 pt-3" >
                           <i class="fs-3 fa-solid fa-truck-fast m-0 p-0"></i>

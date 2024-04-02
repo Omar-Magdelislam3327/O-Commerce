@@ -1,0 +1,134 @@
+body{
+  background-color: #1A222C !important;
+}
+.carde{
+  background-color: rgb(36 48 63) !important;
+  color: rgb(174 183 192) !important;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  & .icon{
+    background-color: rgb(49 61 74) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:3.25rem;
+    height:3.25rem;
+    border-radius: 50%;
+
+  }
+  & .lower p{
+    color: rgb(69 203 133) ;
+  }
+}
+
+.carde:hover{
+  box-shadow: 0px 0px 20px rgba(56, 57, 58, 0.486);
+  transform: scale(1.1);
+}
+.cards:hover .carde:not(:hover) {
+  transform: scale(1);
+  filter: blur(2px);
+}
+
+.carded{
+  background-color: rgb(36 48 63) !important;
+  border: none;
+  border-radius: 10px;
+
+  & .txt h6 , h3{
+    color: #94A3B8;
+  }
+  & small{
+    color: #858B93;
+  }
+  & .fa-mobile-screen{
+    background-color: #E7E7FF;
+    color: #696CFF;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    border-radius: 8px;
+  }
+  & .fa-hat-cowboy{
+    background-color: #E8FADF;
+    color: #71DD37;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    border-radius: 8px;
+  }
+  & .fa-house-chimney{
+    background-color: #FFF5E0;
+    color: #FFAC02;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    border-radius: 8px;
+  }
+  & .fa-futbol{
+    background-color: #EBEEF0;
+    color: #8592A3;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    border-radius: 8px;
+  }
+  & .fa-paypal{
+    background-color: #FFE7E3;
+    color: #FF3E1D;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    border-radius: 8px;
+  }
+  & .fa-wallet{
+    background-color: #EDEDFF;
+    color: #696CFF;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    border-radius: 8px;
+  }
+  & .fa-money-bill-transfer{
+    background-color: #E0F7FC;
+    color: #0DC6ED;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    border-radius: 8px;
+  }
+  & .fa-credit-card{
+    background-color: #EEFBE7;
+    color: #71DD37;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    border-radius: 8px;
+  }
+}

@@ -7,4 +7,5 @@ export class Sales{
   category!:string;
   description!:string;
   discount!:number;
+  quantity!:number;
 }

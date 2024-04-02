@@ -11,7 +11,6 @@ import { NavComponent } from './user-panel/shared/nav/nav.component';
 import { FooterComponent } from './user-panel/shared/footer/footer.component';
 // Components
 import { HomeComponent } from './user-panel/main/home/home.component';
-import { LoginComponent } from './user-panel/main/login/login.component';
 import { AboutComponent } from './user-panel/main/about/about.component';
 import { ContactComponent } from './user-panel/main/contact/contact.component';
 import { ProductsComponent } from './user-panel/main/products/products.component';
@@ -32,6 +31,10 @@ import { MessagesComponent } from './admin-panel/main/messages/messages.componen
 import { DiscountsComponent } from './user-panel/main/discounts/discounts.component';
 import { DiscountsDetailsComponent } from './user-panel/main/discounts-details/discounts-details.component';
 import { CartComponent } from './user-panel/main/cart/cart.component';
+import { RegisterComponent } from './admin-panel/access/register/register.component';
+import { LoginComponent } from './admin-panel/access/login/login.component';
+import { Error404Component } from './user-panel/error404/error404.component';
+import { CartsComponent } from './admin-panel/main/carts/carts.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,6 @@ import { CartComponent } from './user-panel/main/cart/cart.component';
     NavComponent,
     FooterComponent,
     HomeComponent,
-    LoginComponent,
     AboutComponent,
     ContactComponent,
     ProductsComponent,
@@ -56,6 +58,10 @@ import { CartComponent } from './user-panel/main/cart/cart.component';
     DiscountsComponent,
     DiscountsDetailsComponent,
     CartComponent,
+    RegisterComponent,
+    LoginComponent,
+    Error404Component,
+    CartsComponent,
   ],
   imports: [
     BrowserModule,

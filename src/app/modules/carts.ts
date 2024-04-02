@@ -4,5 +4,4 @@ export class Carts{
   price!:number;
   image!:string;
   quantity!:number;
-  subTotal!:number;
 }

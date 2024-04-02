@@ -9,31 +9,27 @@
                   <th scope="col">Price</th>
                   <th scope="col">Quantity</th>
                   <th scope="col">Subtotal</th>
+                  <th scope="col">Actions</th>
               </tr>
           </thead>
           <tbody>
-              <tr *ngFor="let cart of cart">
+              <tr *ngFor="let carts of cart">
                   <th class="th-f">
-                      <img class="img-fluid" src="{{cart.image}}" alt="" />
-                      <p class="text-danger">{{cart.name}}</p>
+                      <img class="img-fluid" src="{{carts.image}}" alt="" />
+                      <p class="text-danger">{{carts.name}}</p>
                   </th>
-                  <td class="text-danger fw-bold">{{cart.price}}$</td>
-                  <td class="text-danger fw-bold">{{cart.quantity}}</td>
-                  <td class="text-danger fw-bold">{{cart.subTotal}}$</td>
+                  <td class="text-danger fw-bold ">{{carts.price}}$</td>
+                  <td class="text-danger fw-bold">{{carts.quantity}}</td>
+                  <td class="text-danger fw-bold ">{{carts.price * carts.quantity}}$</td>
+                  <td>
+                    <button (click)="remove(carts.id)" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+                  </td>
               </tr>
           </tbody>
       </table>
-      <div class="btns">
-          <button class="btn1">Return To Shop</button>
-      </div>
-      <div class="copun mt-5">
-          <div class="d-flex justify-content-between">
-              <div class="rit">
-                  <input type="text" placeholder="Coupon Code" >
-                  <button class="btn-cop">Apply Coupon</button>
-              </div>
-
-          </div>
+      <div class="btns d-flex justify-content-between align-items-center">
+          <button routerLink="/products" class="btn btn-outline-danger">Return To Shop</button>
+          <button class="btn btn-danger">Proceed To Checkout</button>
       </div>
   </section>
   <section class="copun mt-4">

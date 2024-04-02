@@ -13,7 +13,6 @@
     padding: 1px;
 }
 
-
 #main {
     & h1::selection,
     h2::selection,
@@ -33,7 +32,6 @@
     & .hero {
         & .col-lg-2 {
             border-right: #B3B3B3 1px solid;
-
             & p {
                 user-select: none;
                 cursor: pointer;
@@ -83,9 +81,37 @@
         }
 
         & .carde {
-            position: relative;
-            transition: 0.3s;
-        }
+          position: relative;
+          border: 1px solid #E07575;
+          border-radius: 20px;
+          padding: 10px;
+          transition: 0.3s;
+          width: 23% !important;
+          margin: auto;
+          cursor: pointer;
+      }
+
+      & .carde:hover{
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0,  0, 0.19);
+      }
+      & .lower i{
+        background-color: #e0757536;
+        color: var(--primary);
+        border: 1px solid whitesmoke;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        font: 20px 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+      }
+      & .lower i:hover{
+        filter: brightness(150%);
+      }
+
         & .sale>p {
             position: absolute;
             top: 10px;
@@ -107,18 +133,21 @@
             user-select: none;
         }
 
-        & .show>button {
+        & .show>a {
             position: absolute;
             right: 20px;
             top: 10px;
             outline: none;
             border: none;
-            background-color: white;
+            color: brown;
             font-size: 18px;
             cursor: pointer;
             border-radius: 20px;
         }
-
+        & .stars i {
+          font-size: 14px;
+          color: gold !important;
+        }
         & p span {
             color: #B3B3B3 !important;
             text-decoration: line-through;
@@ -338,7 +367,8 @@
             }
 
             & .imag img {
-                box-shadow: 0px 0px 5px #aaaaaa;
+                box-shadow: 0 0 5px #aaaaaa;
+              border-radius: 100px;
             }
         }
     }
@@ -352,7 +382,7 @@
         }
         & .stars i {
           font-size: 14px;
-          color: gold;
+          color: gold !important;
         }
         & h6:before {
             content: "";
@@ -379,11 +409,50 @@
                 padding: 30px;
             }
         }
+        & .view-btn {
+          background-color: var(--secondary);
+          padding: 15px 30px;
+          border: none;
+          outline: none;
+          border-radius: 6px;
+          color: #FAFAFA;
+          transition: 0.3s;
+      }
 
+      & .view-btn:hover {
+          background-color: #A0BCE0;
+      }
         & .carde {
-            position: relative;
-        }
+          position: relative;
+          border: 1px solid #004d1f;
+          border-radius: 20px;
+          padding: 10px;
+          transition: 0.3s;
+          width: 23% !important;
+          margin: auto;
+          cursor: pointer;
+      }
 
+      & .carde:hover{
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0,  0, 0.19);
+      }
+        & .lower i{
+          background-color: #72ffab41;
+          color: var(--secondary);
+          border: 1px solid whitesmoke;
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          text-align: center;
+          font: 20px 500;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: 0.3s;
+        }
+        & .lower i:hover{
+          filter: brightness(150%);
+        }
         & .labelps>p {
           position: absolute;
           top: 10px;
@@ -395,35 +464,16 @@
           user-select: none;
       }
 
-        & .show>button {
+        & .show>a {
             position: absolute;
             right: 20px;
             top: 10px;
             outline: none;
             border: none;
-            background-color: white;
+            color: #001a0a;
             font-size: 18px;
             cursor: pointer;
             border-radius: 20px;
-        }
-
-        & p span {
-            color: #B3B3B3 !important;
-            text-decoration: line-through;
-        }
-
-        & .view-btn {
-            background-color: var(--primary);
-            padding: 15px 30px;
-            border: none;
-            outline: none;
-            border-radius: 6px;
-            color: #FAFAFA;
-            transition: 0.3s;
-        }
-
-        & .view-btn:hover {
-            background-color: var(--hover);
         }
     }
 
@@ -876,6 +926,112 @@
 #allproducts{
     & .prod {
         & h6 {
+            color: var(--secondary);
+            font-size: 20px;
+            position: relative;
+            margin-left: 20px;
+        }
+
+        & h6:before {
+            content: "";
+            position: absolute;
+            height: 30px;
+            width: 16px;
+            top: 0;
+            left: -20px;
+            background-color: var(--secondary);
+            border-radius: 3px;
+        }
+        & .stars i{
+          font-size: 14px;
+          color: gold;
+        }
+        & .back {
+          background-color: rgb(236, 236, 236);
+          height: 220px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: none;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+
+          & img {
+              padding: 30px;
+          }
+      }
+      & .view-btn {
+        background-color: var(--secondary);
+        padding: 15px 30px;
+        border: none;
+        outline: none;
+        border-radius: 6px;
+        color: #FAFAFA;
+        transition: 0.3s;
+    }
+
+    & .view-btn:hover {
+        background-color: #A0BCE0;
+    }
+      & .carde {
+        position: relative;
+        border: 1px solid #004d1f;
+        border-radius: 20px;
+        padding: 10px;
+        transition: 0.3s;
+        width: 23% !important;
+        margin: auto;
+        cursor: pointer;
+    }
+
+    & .carde:hover{
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0,  0, 0.19);
+    }
+      & .lower i{
+        background-color: #72ffab41;
+        color: var(--secondary);
+        border: 1px solid whitesmoke;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        font: 20px 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+      }
+      & .lower i:hover{
+        filter: brightness(150%);
+      }
+      & .labelps>p {
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        background-color: var(--secondary);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 7px;
+        user-select: none;
+    }
+
+      & .show>a {
+          position: absolute;
+          right: 20px;
+          top: 10px;
+          outline: none;
+          border: none;
+          color: #001a0a;
+          font-size: 18px;
+          cursor: pointer;
+          border-radius: 20px;
+      }
+  }
+}
+
+#alldiscounts{
+    & .prod {
+        & h6 {
             color: var(--primary);
             font-size: 20px;
             position: relative;
@@ -1034,4 +1190,20 @@ footer {
     & .social i:hover {
         color: var(--primary);
     }
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  transition: 0.2s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
 }

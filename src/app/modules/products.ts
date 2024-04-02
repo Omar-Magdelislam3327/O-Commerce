@@ -6,4 +6,5 @@ export class Products{
   category!:string;
   description!:string;
   labelps!:string;
+  quantity!:number;
 }

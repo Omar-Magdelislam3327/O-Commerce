@@ -2333,9 +2333,9 @@ progress {
 
 .table-dark {
     --bs-table-color: #fff;
-    --bs-table-bg: #212529;
+    --bs-table-bg: #1E293B;
     --bs-table-border-color: #4d5154;
-    --bs-table-striped-bg: #2c3034;
+    --bs-table-striped-bg: #24303F;
     --bs-table-striped-color: #fff;
     --bs-table-active-bg: #373b3e;
     --bs-table-active-color: #fff;
@@ -2386,7 +2386,9 @@ progress {
 }
 
 .form-label {
-    margin-bottom: .5rem
+    margin-bottom: .5rem;
+    color : #94A3B8;
+    font-weight: 700;
 }
 
 .col-form-label {
@@ -2422,13 +2424,13 @@ progress {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: var(--bs-body-color);
+    color: #94A3B8;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background-color: var(--bs-body-bg);
+    background-color: transparent;
     background-clip: padding-box;
-    border: var(--bs-border-width) solid var(--bs-border-color);
+    border: var(--bs-border-width) solid #324055;
     border-radius: var(--bs-border-radius);
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
 }
@@ -2448,8 +2450,8 @@ progress {
 }
 
 .form-control:focus {
-    color: var(--bs-body-color);
-    background-color: var(--bs-body-bg);
+    color: #94A3B8;;
+    background-color: transparent;
     border-color: #86b7fe;
     outline: 0;
     box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25)
@@ -2472,7 +2474,7 @@ progress {
 }
 
 .form-control::placeholder {
-    color: var(--bs-secondary-color);
+    color: #858B93;
     opacity: 1
 }
 

@@ -11,17 +11,23 @@ import { CartApiService } from 'src/app/controllers/cart-api.service';
 })
 export class ProductsComponent {
   products  !: any;
-  cart = new Carts()
+  cart = new Carts();
   constructor(private api: ProductsApiService , private apicart : CartApiService){
     this.api.get().subscribe((data : any)=>{
       this.products = data;
-      this.addToCart(Products);
     })
-
   }
-  addToCart(cart:any){
-    this.api.post(this.cart).subscribe((data:any)=>{
-      console.log(data);
+  ngOnInit(){
+    this.addToCart(this.cart.id)
+  }
+  addToCart(id:any){
+    this.apicart.getById(id).subscribe((data : any)=>{
+      this.apicart.post(this.cart).subscribe((data:any)=>{
+        this.cart = data;
+      })
+    })
+    this.apicart.post(this.products[id-1]).subscribe((data:any)=>{
+      this.cart = data;
     })
   }
 }

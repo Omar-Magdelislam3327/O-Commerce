@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CartApiService } from 'src/app/controllers/cart-api.service';
 import { SalesApiService } from 'src/app/controllers/sales-api.service';
+import { Carts } from 'src/app/modules/carts';
 import { Sales } from 'src/app/modules/sales';
 
 @Component({
@@ -9,12 +11,38 @@ import { Sales } from 'src/app/modules/sales';
   styleUrls: ['./discounts-details.component.css']
 })
 export class DiscountsDetailsComponent {
-  sale = new Sales();
   id !: any;
-  constructor(private api : SalesApiService , private ActivatedRoute : ActivatedRoute , private router : Router){
+  sale = new Sales();
+  sales !:any;
+  cart = new Carts();
+  ngOnInit(){
+    let btns = document.querySelectorAll(`.btnsize`);
+    function removeActiveClass(btns:any) {
+      btns.forEach((btn : any) => btn.classList.remove('active'));
+    }
+    const sizeButtons = document.querySelectorAll('.size-button');
+    sizeButtons.forEach(sizeButton => {
+      sizeButton.addEventListener('click', () => {
+          removeActiveClass(sizeButtons);
+          sizeButton.classList.add('active');
+      });
+    });
+    this.addToCart(this.cart.id)
+  }
+  constructor(private api : SalesApiService , private ActivatedRoute : ActivatedRoute , private apicart : CartApiService){
     this.id = this.ActivatedRoute.snapshot.params['id'];
     this.api.getById(this.id).subscribe((data:any) =>{
-      this.sale = data
+      this.sale = data;
+    })
+  }
+  addToCart(id:any){
+    this.id = this.ActivatedRoute.snapshot.params['id'];
+    this.apicart.getById(this.id).subscribe((data:any)=>{
+      this.apicart.post(this.cart).subscribe((data:any)=>{
+      })
+      this.apicart.post(this.sales[id-1]).subscribe((data:any)=>{
+        this.cart = data;
+      })
     })
   }
 }

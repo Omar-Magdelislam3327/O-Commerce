@@ -11,11 +11,12 @@
     },
     {
       "id": 2,
-      "name": "HAVIT HV-G92 Gamepad",
-      "price": " 50.00",
+      "name": "Playstation 5",
+      "price": " 500.00",
       "image": "assets/vendors/imgs/image 63.png",
       "category": "Gaming",
-      "labelps": "New"
+      "labelps": "New",
+      "description": "The latest Sony PlayStation introduced in November 2020. Powered by an eight-core AMD Zen 2 CPU and custom AMD Radeon GPU, the PS5 is offered in two models: with and without a 4K Blu-ray drive. Supporting a 120Hz video refresh, the PS5 is considerably more powerful than the PS4 and PS4 Pro."
     },
     {
       "id": 3,
@@ -32,67 +33,70 @@
       "image": "assets/vendors/imgs/Frame 613.png",
       "category": "Electronics",
       "labelps": "New"
-    },
-    {
-      "id": 5
-    },
-    {
-      "id": 6
     }
   ],
   "carts": [
     {
-      "id": 1,
-      "name": "Gucci duffle bag",
-      "price": " 950.00",
-      "image": "assets/vendors/imgs/Gucci-Savoy-medium-duffle-bag-1.png",
-      "quantity": 1,
-      "subTotal": 650
-    },
-    {
-      "id": 2,
-      "name": "Gucci duffle bag",
-      "price": " 950.00",
-      "image": "assets/vendors/imgs/Gucci-Savoy-medium-duffle-bag-1.png",
-      "quantity": 1,
-      "subTotal": 950
+      "description": "\nAn IKEA office setup is characterized by modern, functional furniture tailored for efficient workspaces. It typically includes desks like the LINNMON or BEKANT series, ergonomic chairs such as MARKUS or MILLBERGET, storage solutions like cabinets and shelves, lighting options such as desk lamps or overhead fixtures, and accessories like cable management systems and desk organizers. These elements combine affordability with contemporary design to create comfortable and productive work environments.",
+      "name": "IKEA Book Shelf",
+      "price": "360",
+      "discount": "50",
+      "oldPrice": "720",
+      "image": "assets\\vendors\\imgs\\sam-moghadam-khamseh-L_7MQsHl_aU-unsplash 1.png",
+      "category": "Office",
+      "id": 3,
+      "quantity": 2
     }
   ],
   "sales": [
     {
-      "id": 1,
-      "name": "HAVIT HV-G92 Gamepad",
-      "price": " 120.00",
-      "oldPrice": " 160.50",
-      "image": "assets/vendors/imgs/Frame 570.png",
+      "description": "A Gucci coat is a high-end outerwear garment known for its luxury materials, impeccable tailoring, and iconic design elements. They often feature signature Gucci patterns, tailored silhouettes, embellishments, and statement accents. Crafted from premium fabrics like wool, cashmere, or silk, Gucci coats embody sophistication and elegance while offering versatility for both everyday wear and special occasions.",
+      "name": "Gucci Coat",
+      "price": "100",
       "discount": "20",
-      "description": "gggghjnbghjnbvghbvgtyuj",
-      "category": "gaming"
+      "oldPrice": "120",
+      "image": "assets\\vendors\\imgs\\Gucci-coat 1.png",
+      "category": "Clothes",
+      "id": 1
     },
     {
-      "id": 2,
-      "name": "Cannon n98 Camera",
-      "price": " 260.00",
-      "oldPrice": " 390.50",
-      "image": "assets/vendors/imgs/Cart (1).png",
-      "discount": "30"
+      "name": "Adidas Coat",
+      "price": "60",
+      "oldPrice": "75",
+      "discount": "20",
+      "image": "assets\\vendors\\imgs\\jacket.png",
+      "category": "Clothes",
+      "description": "A Adidas jacket is a premium piece of outerwear synonymous with luxury and style. Known for its exceptional craftsmanship and attention to detail, a Adidas jacket typically features high-quality materials like leather, suede, or luxurious fabrics such as silk and wool. They often showcase iconic Adidas motifs, tailored fits, and statement accents like bold prints or embellishments. Whether it's a classic leather biker jacket or a contemporary bomber style, Adidas jackets effortlessly combine sophistication with edgy flair, making them a coveted addition to any fashion-forward wardrobe.",
+      "id": 2
     },
     {
-      "id": 3,
-      "name": "ASUS FHD Gaming Laptop",
-      "price": " 750.00",
-      "oldPrice": " 910.50",
-      "image": "assets/vendors/imgs/Cart (2).png",
-      "discount": "40"
+      "description": "\nAn IKEA office setup is characterized by modern, functional furniture tailored for efficient workspaces. It typically includes desks like the LINNMON or BEKANT series, ergonomic chairs such as MARKUS or MILLBERGET, storage solutions like cabinets and shelves, lighting options such as desk lamps or overhead fixtures, and accessories like cable management systems and desk organizers. These elements combine affordability with contemporary design to create comfortable and productive work environments.",
+      "name": "IKEA Book Shelf",
+      "price": "360",
+      "discount": "50",
+      "oldPrice": "720",
+      "image": "assets\\vendors\\imgs\\sam-moghadam-khamseh-L_7MQsHl_aU-unsplash 1.png",
+      "category": "Office",
+      "id": 3
     },
     {
-      "id": 4,
-      "name": "S-Series Comfort Chair",
-      "price": " 160.00",
-      "oldPrice": " 320.00",
-      "image": "assets/vendors/imgs/sam-moghadam-khamseh-kvmdsTrGOBM-unsplash 1.png",
-      "discount": "50"
+      "name": "Realme 12 Pro Plus",
+      "price": "375",
+      "discount": "10",
+      "oldPrice": "500",
+      "description": "\nRealme 12 Pro Plus is a flagship smartphone known for its advanced features and performance. It typically boasts a high-quality display, powerful processor, impressive camera setup, fast charging capabilities, and sleek design. With a focus on providing excellent value for money, the Realme 12 Pro Plus offers cutting-edge technology and innovative features, making it a competitive option in the smartphone market.",
+      "category": "Mobile",
+      "image": "assets\\vendors\\imgs\\Realme-12-pro-plus-5g-submarine-blue-12gb-256gb-ram-Back-View.png",
+      "id": 4
     }
   ],
-  "feedback": []
+  "feedback": [],
+  "admin": [
+    {
+      "email": "omagd206@gmail.com",
+      "name": "omar",
+      "password": "1234",
+      "id": 1
+    }
+  ]
 }

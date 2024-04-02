@@ -1,29 +1,33 @@
 <div id="login" class="container">
   <div class="row align-items-center justify-content-between gap-5">
       <div class="imag col-lg-6 d-none d-md-block">
-          <img class="img-fluid" src="assets/vendors/imgs/Side Image (1).png" alt="">
+          <img class="img-fluid" src="assets/vendors/imgs/Side Image (1).png" alt>
       </div>
       <div class="txt col-lg-5 col-12 order-1 order-lg-2">
           <div class="form">
               <div class="title">
-                  <h2>Log in to O Commerce</h2>
+                  <h2>Register</h2>
                   <p>Enter Your Details Below</p>
               </div>
               <div class="format">
                   <div class="form__group field">
-                      <input #input="ngModel" ngModel type="input" class="form__field" placeholder="Email" required="">
+                      <input type="input" #email="ngModel" [(ngModel)]="admin.email" name="email" id="email" class="form__field" placeholder="Email" required>
                       <label for="Email" class="form__label">Email or Phone Number</label>
                   </div>
                   <div class="form__group field mt-3">
-                      <input #pass="ngModel" ngModel type="password" class="form__field" placeholder="password" required="">
+                      <input type="input" #name="ngModel" [(ngModel)]="admin.name" name="name" id="name" ngModel class="form__field" placeholder="Username" required>
+                      <label for="Username" class="form__label">Username</label>
+                  </div>
+                  <div class="form__group field mt-3">
+                      <input type="input" #password="ngModel" [(ngModel)]="admin.password" name="password" id="password" ngModel class="form__field" placeholder="password" required>
                       <label for="password" class="form__label">Password</label>
                   </div>
                   <div class="btn-login mt-5 d-flex gap-5 align-items-center">
-                      <button [disabled]="input.invalid || pass.invalid" routerLink="/home" type="submit" class="btn btn-danger">Login</button>
+                      <button (click)="submit()" type="submit" class="btn btn-danger">Register</button>
                       <a class="text-danger" href="">Forget Password?</a>
                   </div>
               </div>
           </div>
       </div>
+      </div>
   </div>
-</div>

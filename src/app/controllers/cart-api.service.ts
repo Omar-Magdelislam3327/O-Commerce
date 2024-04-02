@@ -7,7 +7,6 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CartApiService extends ApiFunctionService<Carts>{
-
   constructor(public override http : HttpClient) {
     super('http://localhost:3000/carts', http);}
   }

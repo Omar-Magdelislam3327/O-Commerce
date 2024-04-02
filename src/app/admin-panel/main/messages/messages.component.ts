@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { FeedbackApiService } from 'src/app/controllers/feedback-api.service';
 
 @Component({
@@ -8,8 +9,12 @@ import { FeedbackApiService } from 'src/app/controllers/feedback-api.service';
 })
 export class MessagesComponent {
   message!:any[];
-  constructor(private api : FeedbackApiService){
+  constructor(private api : FeedbackApiService , private router : Router){
     this.getAllMessages()
+    let loggedIn =  JSON.parse(localStorage.getItem("LoggedIn") || "false");
+    if(!loggedIn){
+      this.router.navigateByUrl("/notFound")
+    }
   }
   getAllMessages(){
     this.api.get().subscribe((data : any)=>{

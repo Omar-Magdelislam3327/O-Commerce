@@ -1,5 +1,6 @@
 import { Products } from './../../../../modules/products';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProductsApiService } from 'src/app/controllers/products-api.service';
 
 @Component({
@@ -9,8 +10,12 @@ import { ProductsApiService } from 'src/app/controllers/products-api.service';
 })
 export class ListComponent {
   Products!:any[];
-  constructor(private api : ProductsApiService){
+  constructor(private api : ProductsApiService , private router : Router){
     this.getAllProducts();
+    let loggedIn =  JSON.parse(localStorage.getItem("LoggedIn") || "false");
+    if(!loggedIn){
+      this.router.navigateByUrl("/notFound")
+    }
   }
   getAllProducts(){
     this.api.get().subscribe((data : any)=>{

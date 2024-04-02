@@ -11,9 +11,9 @@
           <div class="row mt-3 align-items-center gap-4 ">
               <div class="carde col-xl-3 col-lg-6 col-md-6 col-sm-12 m-0 my-3" *ngFor="let product of products">
                   <div class="back text-center">
-                      <img class="img-fluid" src="{{product.image}}" alt="">
+                      <img #image="ngModel" [(ngModel)]="cart.image" name="image" id="image" class="img-fluid" src="{{product.image}}" alt="">
                   </div>
-                  <div class="new">
+                  <div class="labelps">
                     <p>{{product.labelps}}</p>
                 </div>
                   <div class="show">
@@ -28,7 +28,7 @@
                     <i class="fa-solid fa-star"></i>
                   </div>
                   <div class="lower d-flex justify-content-between align-items-center">
-                    <p class="p-0 m-0 text-danger fw-bold">{{product.price}}$<span></span></p>
+                    <p class="p-0 m-0 text-success fw-bold">{{product.price}}$</p>
                     <i class="fa-solid fa-cart-plus"></i>
                   </div>
               </div>
