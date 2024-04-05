@@ -4,7 +4,8 @@ import {HttpClientModule} from  '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-
+import { InputNumberModule } from 'primeng/inputnumber';
+import { ChartModule } from 'primeng/chart';
 // User
 // Shared
 import { NavComponent } from './user-panel/shared/nav/nav.component';
@@ -35,6 +36,10 @@ import { RegisterComponent } from './admin-panel/access/register/register.compon
 import { LoginComponent } from './admin-panel/access/login/login.component';
 import { Error404Component } from './user-panel/error404/error404.component';
 import { CartsComponent } from './admin-panel/main/carts/carts.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SwiperComponent } from './swiper/swiper.component';
+import { PieComponent } from './charts/pie/pie.component';
+import { BarsComponent } from './charts/bars/bars.component';
 
 @NgModule({
   declarations: [
@@ -62,12 +67,19 @@ import { CartsComponent } from './admin-panel/main/carts/carts.component';
     LoginComponent,
     Error404Component,
     CartsComponent,
+    SwiperComponent,
+    PieComponent,
+    BarsComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule,
+    InputNumberModule,
+    ChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]

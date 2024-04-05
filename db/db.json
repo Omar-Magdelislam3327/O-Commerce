@@ -37,6 +37,16 @@
   ],
   "carts": [
     {
+      "name": "Adidas Coat",
+      "price": "60",
+      "oldPrice": "75",
+      "discount": "20",
+      "image": "assets\\vendors\\imgs\\jacket.png",
+      "category": "Clothes",
+      "description": "A Adidas jacket is a premium piece of outerwear synonymous with luxury and style. Known for its exceptional craftsmanship and attention to detail, a Adidas jacket typically features high-quality materials like leather, suede, or luxurious fabrics such as silk and wool. They often showcase iconic Adidas motifs, tailored fits, and statement accents like bold prints or embellishments. Whether it's a classic leather biker jacket or a contemporary bomber style, Adidas jackets effortlessly combine sophistication with edgy flair, making them a coveted addition to any fashion-forward wardrobe.",
+      "id": 2
+    },
+    {
       "description": "\nAn IKEA office setup is characterized by modern, functional furniture tailored for efficient workspaces. It typically includes desks like the LINNMON or BEKANT series, ergonomic chairs such as MARKUS or MILLBERGET, storage solutions like cabinets and shelves, lighting options such as desk lamps or overhead fixtures, and accessories like cable management systems and desk organizers. These elements combine affordability with contemporary design to create comfortable and productive work environments.",
       "name": "IKEA Book Shelf",
       "price": "360",
@@ -45,7 +55,7 @@
       "image": "assets\\vendors\\imgs\\sam-moghadam-khamseh-L_7MQsHl_aU-unsplash 1.png",
       "category": "Office",
       "id": 3,
-      "quantity": 2
+      "quantity": 5
     }
   ],
   "sales": [

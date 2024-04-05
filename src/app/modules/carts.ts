@@ -3,5 +3,5 @@ export class Carts{
   name!:string;
   price!:number;
   image!:string;
-  quantity!:number;
+  quantity:number = 1;
 }

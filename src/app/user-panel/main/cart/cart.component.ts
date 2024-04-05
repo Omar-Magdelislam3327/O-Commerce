@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
 import { CartApiService } from 'src/app/controllers/cart-api.service';
 import { Carts } from 'src/app/modules/carts';
+import { Component, inject, TemplateRef } from '@angular/core';
+import { ModalDismissReasons, NgbDatepickerModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-cart',
@@ -12,6 +13,30 @@ export class CartComponent {
   constructor(private api : CartApiService) {
     this.getCart();
   }
+  private modalService = inject(NgbModal);
+	closeResult = '';
+
+	open(content: TemplateRef<any>) {
+		this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then(
+			(result) => {
+				this.closeResult = `Closed with: ${result}`;
+			},
+			(reason) => {
+				this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+			},
+		);
+	}
+
+	private getDismissReason(reason: any): string {
+		switch (reason) {
+			case ModalDismissReasons.ESC:
+				return 'by pressing ESC';
+			case ModalDismissReasons.BACKDROP_CLICK:
+				return 'by clicking on a backdrop';
+			default:
+				return `with: ${reason}`;
+		}
+	}
   getCart(){
     this.api.get().subscribe((data:any)=>{
       this.cart = data;
@@ -23,3 +48,4 @@ export class CartComponent {
     })
   }
 }
+

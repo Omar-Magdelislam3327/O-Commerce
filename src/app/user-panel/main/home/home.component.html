@@ -1,6 +1,6 @@
 <app-nav></app-nav>
 <main id="main">
-  <section class="hero pb-5" >
+  <section class="hero pb-2" >
       <div class="container">
           <div class="row justify-content-between">
               <div class="col-lg-2 col-10 order-lg-1 order-2 d-lg-block d-none" >
@@ -15,20 +15,13 @@
                   <p class="mt-2 p-0">Health & Beauty</p>
               </div>
               <div class="col-lg-10 col-12 order-lg-2 order-1 pt-3">
-                <div class="slide-swp mySwiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide"><a routerLink="/products"><img src="assets/vendors/imgs/slider-01.jpg" alt=""></a></div>
-                    <div class="swiper-slide"><a routerLink="/products"><img src="assets/vendors/imgs/slider-02.jpg" alt=""></a></div>
-                    <div class="swiper-slide"><a routerLink="/products"><img src="assets/vendors/imgs/slider-03.jpg" alt=""></a></div>
-                    </div>
-                  <div class="swiper-pagination"></div>
-                </div>
-
+                <app-swiper></app-swiper>
               </div>
           </div>
       </div>
   </section>
   <!--  -->
+
   <section class="sales mt-5">
       <div class="container pt-4">
           <div class="title" >
@@ -38,28 +31,30 @@
                   <h4 id="demo"></h4>
               </div>
           </div>
-          <div class="row mt-3">
-            <div class="carde" *ngFor="let sale of sales">
-              <div class="back text-center">
-                <img class="img-fluid" src="{{sale.image}}" alt="">
-              </div>
-              <div class="sale">
-                <p>{{sale.discount}}%</p>
-              </div>
-              <div class="show">
-                <a routerLink="/show/{{sale.id}}"><i class="fa-solid fa-eye"></i></a>
-              </div>
-              <h5 class="p-0 m-0 mt-2">{{sale.name}}</h5>
-              <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <div class="lower d-flex justify-content-between align-items-center">
-                <p class="p-0 m-0 text-danger fw-bold">{{sale.price}}$<span> {{sale.oldPrice}}$</span></p>
-                <i class="fa-solid fa-cart-plus"></i>
+          <div class="row d-flex mt-3">
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-2 mt-lg-0" *ngFor="let sale of sales">
+              <div class="carde" >
+                <div class="back text-center">
+                  <img class="img-fluid" src="{{sale.image}}" alt="">
+                </div>
+                <div class="sale">
+                  <p>{{sale.discount}}%</p>
+                </div>
+                <div class="show">
+                  <a routerLink="/show/{{sale.id}}"><i class="fa-solid fa-eye"></i></a>
+                </div>
+                <h5 class="p-0 m-0 mt-2">{{sale.name}}</h5>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="lower d-flex justify-content-between align-items-center">
+                  <p class="p-0 m-0 text-danger fw-bold">{{sale.price}}$<span> {{sale.oldPrice}}$</span></p>
+                  <i class="fa-solid fa-cart-plus"></i>
+                </div>
               </div>
             </div>
           </div>

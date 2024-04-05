@@ -1,45 +1,47 @@
 <app-navbar></app-navbar>
-<div class="container py-4 col-lg-6 col-md-8 col-sm-10 col-12">
-  <div class="card text-light">
-    <div class="card-body">
-      <h2 class="text-success text-center">Add New Sale</h2>
-      <form>
+<main>
+  <div class="container py-4 col-lg-6 col-md-8 col-sm-10 col-12">
+    <div class="card text-light">
+      <div class="card-body">
+        <h2 class="text-success text-center">Add New Sale</h2>
+        <form>
 
-        <div class="form-group mt-2">
-          <label class="form-label">Product's Name</label>
-          <input #name="ngModel" [(ngModel)]="sales.name" type="text" class="form-control shadow-none" name="name" id="name" placeholder="Enter Product Name" required />
-        </div>
-        <div class="price mt-2 d-flex justify-content-between align-items-center flex-wrap">
-          <div class="form-group col-lg-3 col-12">
-            <label class="form-label">Product's Price</label>
-            <input #price="ngModel" [(ngModel)]="sales.price" type="text" class="form-control shadow-none" name="price" id="price" placeholder="Enter Price" required />
+          <div class="form-group mt-2">
+            <label class="form-label">Product's Name</label>
+            <input #name="ngModel" [(ngModel)]="sales.name" type="text" class="form-control shadow-none" name="name" id="name" placeholder="Enter Product Name" required />
           </div>
-          <div class="form-group col-lg-4 col-12">
-            <label class="form-label">Product's Discount</label>
-            <input #discount="ngModel" [(ngModel)]="sales.discount" type="url" class="form-control shadow-none" name="discount" id="discount" placeholder="Enter Discount" required />
+          <div class="price mt-2 d-flex justify-content-between align-items-center flex-wrap">
+            <div class="form-group col-lg-3 col-12">
+              <label class="form-label">Product's Price</label>
+              <input #price="ngModel" [(ngModel)]="sales.price" type="text" class="form-control shadow-none" name="price" id="price" placeholder="Enter Price" required />
+            </div>
+            <div class="form-group col-lg-4 col-12">
+              <label class="form-label">Product's Discount</label>
+              <input #discount="ngModel" [(ngModel)]="sales.discount" type="url" class="form-control shadow-none" name="discount" id="discount" placeholder="Enter Discount" required />
+            </div>
+            <div class="form-group col-lg-3 col-12">
+              <label class="form-label">Product's Old price</label>
+              <input #old="ngModel" [(ngModel)]="sales.oldPrice" type="text" class="form-control shadow-none" name="old-price" id="old-price" placeholder="Enter Old Price" required />
+            </div>
           </div>
-          <div class="form-group col-lg-3 col-12">
-            <label class="form-label">Product's Old price</label>
-            <input #old="ngModel" [(ngModel)]="sales.oldPrice" type="text" class="form-control shadow-none" name="old-price" id="old-price" placeholder="Enter Old Price" required />
-          </div>
-        </div>
 
-        <div class="form-group mt-2 ">
-          <label class="form-label">Product's Image</label>
-          <input #image="ngModel" [(ngModel)]="sales.image" type="url" class="form-control shadow-none" name="image" id="image" placeholder="Enter Product Image URL" required />
-        </div>
-        <div class="form-group mt-2">
-          <label class="form-label">Product's Category</label>
-          <input #name="ngModel" [(ngModel)]="sales.category" type="text" class="form-control shadow-none" name="category" id="category" placeholder="Enter Product Category" required />
-        </div>
-        <div class="form-group mt-2 ">
-          <label class="form-label">Product's Description</label>
-          <textarea #description="ngModel" [(ngModel)]="sales.description" class="form-control shadow-none" id="description" name="description" cols="30" rows="5" placeholder="Description" required> </textarea>
-        </div>
-        <div class="form-group mt-2 text-center">
-          <button (click)="submit()" type="submit" class="btn btn-primary" [disabled]="name.invalid || price.invalid || old.invalid || image.invalid">Add Sale</button>
-        </div>
-      </form>
+          <div class="form-group mt-2 ">
+            <label class="form-label">Product's Image</label>
+            <input #image="ngModel" [(ngModel)]="sales.image" type="url" class="form-control shadow-none" name="image" id="image" placeholder="Enter Product Image URL" required />
+          </div>
+          <div class="form-group mt-2">
+            <label class="form-label">Product's Category</label>
+            <input #name="ngModel" [(ngModel)]="sales.category" type="text" class="form-control shadow-none" name="category" id="category" placeholder="Enter Product Category" required />
+          </div>
+          <div class="form-group mt-2 ">
+            <label class="form-label">Product's Description</label>
+            <textarea #description="ngModel" [(ngModel)]="sales.description" class="form-control shadow-none" id="description" name="description" cols="30" rows="5" placeholder="Description" required> </textarea>
+          </div>
+          <div class="form-group mt-2 text-center">
+            <button (click)="submit()" type="submit" class="btn btn-primary" [disabled]="name.invalid || price.invalid || old.invalid || image.invalid">Add Sale</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
-</div>
+</main>

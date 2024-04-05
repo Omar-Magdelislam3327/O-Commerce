@@ -1,32 +1,35 @@
 <app-navbar></app-navbar>
-<div class="container py-5">
-  <div class="card text-light">
-    <div class="card-body table-responsive">
-      <table class="table table-dark table-striped">
-        <thead>
-          <tr>
-            <th>Product Name</th>
-            <th>Product Category</th>
-            <th>Products Quantity</th>
-            <th>Cart Price</th>
-            <th>Statues</th>
-            <th colspan="2">Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let cart of Carts" >
-            <td>{{cart.name}}</td>
-            <td>{{cart.category}}</td>
-            <td>{{cart.quantity}}</td>
-            <td>{{cart.price}}  $</td>
-            <td class="statues">Pending</td>
-            <td>
-              <a onclick="done()"  class="btn btn-success me-3 doneBtn"><i class="fa-solid fa-check"></i></a>
-              <a  class="btn btn-danger me-3 cancelbtn"><i class="fa-solid fa-xmark"></i></a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+<main>
+  <div class="container py-5">
+    <div class="card text-light">
+      <div class="card-body table-responsive">
+        <table class="table table-dark table-striped">
+          <thead>
+            <tr>
+              <th>Product Name</th>
+              <th>Product Category</th>
+              <th>Products Quantity</th>
+              <th>Cart Price</th>
+              <th>Statues</th>
+              <th colspan="2">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let cart of Carts" >
+              <td>{{cart.name}}</td>
+              <td>{{cart.category}}</td>
+              <td>{{cart.quantity}}</td>
+              <td>{{cart.price}}  $</td>
+              <td class="statues">Pending</td>
+              <td>
+                <a onclick="done()"  class="btn btn-success me-3 doneBtn"><i class="fa-solid fa-check"></i></a>
+                <a  class="btn btn-danger me-3 cancelbtn"><i class="fa-solid fa-xmark"></i></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
-</div>
+
+</main>

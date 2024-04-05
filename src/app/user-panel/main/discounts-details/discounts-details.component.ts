@@ -27,7 +27,7 @@ export class DiscountsDetailsComponent {
           sizeButton.classList.add('active');
       });
     });
-    this.addToCart(this.cart.id)
+    this.addToCart(this.cart.id);
   }
   constructor(private api : SalesApiService , private ActivatedRoute : ActivatedRoute , private apicart : CartApiService){
     this.id = this.ActivatedRoute.snapshot.params['id'];
@@ -36,12 +36,9 @@ export class DiscountsDetailsComponent {
     })
   }
   addToCart(id:any){
-    this.id = this.ActivatedRoute.snapshot.params['id'];
-    this.apicart.getById(this.id).subscribe((data:any)=>{
-      this.apicart.post(this.cart).subscribe((data:any)=>{
-      })
-      this.apicart.post(this.sales[id-1]).subscribe((data:any)=>{
-        this.cart = data;
+    this.api.getById(id).subscribe((data:any)=>{
+      this.apicart.post(data).subscribe((data:any)=>{
+        this.cart=data;
       })
     })
   }

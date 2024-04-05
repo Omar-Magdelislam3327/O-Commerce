@@ -27,7 +27,8 @@
                       </div>
                   </div>
                   <div class="row2 d-flex gap-5 mt-3 ">
-                    <input type="number" #quantity="ngModel" [(ngModel)]="sale.quantity" name="quantity" id="quantity" value="1" min="1" max="10"/>
+                    <input type="number" #quantity="ngModel" [(ngModel)]="cart.quantity" name="quantity" id="quantity" value="1" min="1" max="10"/>
+
                     <div class="btnn">
                         <button class="btn btn-success" (click)="addToCart(sale.id)">Add to cart</button>
                     </div>

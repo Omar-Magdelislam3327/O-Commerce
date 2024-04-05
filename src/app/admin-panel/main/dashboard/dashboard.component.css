@@ -1,5 +1,19 @@
-body{
-  background-color: #1A222C !important;
+main{
+  background-color: #0F172A !important;
+}
+.statues{
+  color: orangered !important;
+}
+td{
+  color: #94A3B8 !important;
+}
+.card{
+  background-color: #24303F !important;
+  overflow-x: auto !important;
+  & p{
+    font-weight: 500;
+    font-size: 18px;
+  }
 }
 .carde{
   background-color: rgb(36 48 63) !important;
@@ -132,3 +146,9 @@ body{
     border-radius: 8px;
   }
 }
+
+
+  h3{
+    color: #94A3B8;
+    font-weight: 900;
+  }

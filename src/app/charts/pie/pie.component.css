@@ -1,0 +1,7 @@
+.card{
+  background-color: #24303F !important;
+  & h3{
+    color: #94A3AD;
+    font-weight: bold;
+  }
+}

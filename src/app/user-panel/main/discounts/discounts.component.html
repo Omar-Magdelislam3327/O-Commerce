@@ -8,31 +8,33 @@
           <h3>Dive Into Our Discount Wonderland!</h3>
         </div>
       </div>
-      <div class="row mt-3 align-items-center gap-4 ">
-        <div class="carde col-xl-3 col-lg-6 col-md-6 col-sm-12 m-0 my-3" *ngFor="let sale of sales">
-          <div class="back text-center">
-            <img class="img-fluid" src="{{sale.image}}" alt="">
-          </div>
-          <div class="sale">
-            <p>{{sale.discount}}%</p>
-          </div>
-          <div class="show">
-            <a routerLink="/show/{{sale.id}}"><i class="fa-solid fa-eye"></i></a>
-          </div>
-          <h5 class="p-0 m-0 mt-2">{{sale.name}}</h5>
-          <div class="stars">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-          </div>
-          <div class="lower d-flex justify-content-between align-items-center">
-            <p class="p-0 m-0 text-danger fw-bold">{{sale.price}}$<span> {{sale.oldPrice}}$</span></p>
-            <input class="w-25" type="number" #quantity="ngModel" [(ngModel)]="sale.quantity" name="quantity" value="1" min="1" max="10"/>
-            <i class="fa-solid fa-cart-plus" (click)="addToCart(sale.id)"></i>
-          </div>
-        </div>
+      <div class="row mt-3 align-items-center">
+        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 m-0 my-3" *ngFor="let sale of sales">
+          <div class="carde">
+            <div class="back text-center">
+              <img class="img-fluid" src="{{sale.image}}" alt="">
+            </div>
+            <div class="sale">
+              <p>{{sale.discount}}%</p>
+            </div>
+            <div class="show">
+              <a routerLink="/show/{{sale.id}}"><i class="fa-solid fa-eye"></i></a>
+            </div>
+            <h5 class="p-0 m-0 mt-2">{{sale.name}}</h5>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="lower d-flex justify-content-between align-items-center">
+              <p class="p-0 m-0 text-danger fw-bold">{{sale.price}}$<span> {{sale.oldPrice}}$</span></p>
+              <input class="w-25" type="number" #quantity="ngModel" [(ngModel)]="sale.quantity" name="quantity" value="1" min="1" max="10"/>
+              <i class="fa-solid fa-cart-plus" (click)="addToCart(sale.id)"></i>
+            </div>
+          </div></div>
+
       </div>
     </div>
   </section>
