@@ -27,18 +27,24 @@ export class DiscountsDetailsComponent {
           sizeButton.classList.add('active');
       });
     });
-    this.addToCart(this.cart.id);
+    this.addToCart(this.cart.id , this.cart.quantity);
   }
   constructor(private api : SalesApiService , private ActivatedRoute : ActivatedRoute , private apicart : CartApiService){
     this.id = this.ActivatedRoute.snapshot.params['id'];
     this.api.getById(this.id).subscribe((data:any) =>{
       this.sale = data;
     })
+    this.apicart.getById(this.id).subscribe((data:any)=>{
+      this.cart=data;
+    })
   }
-  addToCart(id:any){
+  addToCart(id:any , quantity : number){
     this.api.getById(id).subscribe((data:any)=>{
-      this.apicart.post(data).subscribe((data:any)=>{
-        this.cart=data;
+      data.quantity = quantity;
+      this.api.put(id , data).subscribe((data:any)=>{
+        this.apicart.post(data).subscribe((data:any)=>{
+          this.cart=data;
+        })
       })
     })
   }

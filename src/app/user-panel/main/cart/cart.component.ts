@@ -10,9 +10,11 @@ import { ModalDismissReasons, NgbDatepickerModule, NgbModal } from '@ng-bootstra
 })
 export class CartComponent {
   cart !:any;
+  id!:any
   constructor(private api : CartApiService) {
     this.getCart();
   }
+
   private modalService = inject(NgbModal);
 	closeResult = '';
 
@@ -45,6 +47,12 @@ export class CartComponent {
   remove(id:any){
     this.api.delete(id).subscribe((data:any)=>{
       this.getCart();
+    })
+  }
+  update(id:any){
+    this.api.put(id , this.cart).subscribe((data:any)=>{
+      location.reload();
+      console.log("updated");
     })
   }
 }
