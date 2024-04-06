@@ -20,6 +20,7 @@ import { LoginComponent } from './admin-panel/access/login/login.component';
 import { RegisterComponent } from './admin-panel/access/register/register.component';
 import { Error404Component } from './user-panel/error404/error404.component';
 import { CartsComponent } from './admin-panel/main/carts/carts.component';
+import { ModalEditComponent } from './modal-edit/modal-edit.component';
 const routes: Routes = [
   {path:"" , redirectTo:"home", pathMatch:"full"},
   {path:"notFound" , component: Error404Component},
@@ -31,6 +32,7 @@ const routes: Routes = [
   {path:"discounts" , component:DiscountsComponent , title:"O  Commerce | Discounts"},
   {path:"show/:id" , component:DiscountsDetailsComponent , title:"O   Commerce | Details"},
   {path:"cart" , component:CartComponent , title:"O Commerce | Cart"},
+  {path:"cartss/:id" , component:ModalEditComponent , title:"O Commerce | Cart"},
   {path:"admin",
     children:[
       {path:"dashboard" , component:DashboardComponent , title:"O Commerce | Dashboard"},

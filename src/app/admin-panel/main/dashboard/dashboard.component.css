@@ -1,14 +1,18 @@
 main{
-  background-color: #0F172A !important;
+  background-color: #222831 !important;
 }
 .statues{
   color: orangered !important;
+}
+table{
+  border: none;
+  border-radius: 10px !important;
 }
 td{
   color: #94A3B8 !important;
 }
 .card{
-  background-color: #24303F !important;
+  background-color: #393E46 !important;
   overflow-x: auto !important;
   & p{
     font-weight: 500;
@@ -16,7 +20,7 @@ td{
   }
 }
 .carde{
-  background-color: rgb(36 48 63) !important;
+  background-color: #393E46 !important;
   color: rgb(174 183 192) !important;
   border: none;
   border-radius: 10px;
@@ -47,12 +51,12 @@ td{
 }
 
 .carded{
-  background-color: rgb(36 48 63) !important;
+  background-color: #393E46 !important;
   border: none;
   border-radius: 10px;
 
   & .txt h6 , h3{
-    color: #94A3B8;
+    color: #00ADB5;
   }
   & small{
     color: #858B93;
@@ -149,6 +153,6 @@ td{
 
 
   h3{
-    color: #94A3B8;
+    color: #00ADB5;
     font-weight: 900;
   }

@@ -11,6 +11,7 @@ import { Sales } from 'src/app/modules/sales';
   styleUrls: ['./discounts-details.component.css']
 })
 export class DiscountsDetailsComponent {
+
   id !: any;
   sale = new Sales();
   sales !:any;

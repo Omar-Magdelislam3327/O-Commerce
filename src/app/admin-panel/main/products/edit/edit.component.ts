@@ -20,7 +20,6 @@ export class EditComponent {
   update(){
     this.api.put(this.id,this.product).subscribe(()=>{
       location.reload();
-
     })
   }
 }

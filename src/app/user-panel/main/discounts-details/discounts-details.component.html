@@ -1,59 +1,60 @@
 <app-nav></app-nav>
 <main id="show">
   <div class="container mt-5">
-      <div class="row justify-content-center gap-5">
-          <div class="lft col-lg-6 col-12">
-              <div class="imag" id="containerImg">
-                  <img width="350" id="image" class="img-fluid" src="{{sale.image}}" alt="">
-              </div>
-          </div>
-          <div class="rit col-lg-5 col-12">
-              <div class="txt">
-                  <h2>{{sale.name}}</h2>
-                  <span class="text-success fw-bold">In Stock</span>
-                  <h5>{{sale.price}}$</h5>
-                  <p>{{sale.description}}</p>
-                  <hr>
-                  <div class="sizes">
-                      <div class="size-selector">
-                          <span class="size-label">Size:</span>
-                          <div class="size-options">
-                              <span class="size-button" data-size="XS">XS</span>
-                              <span class="size-button" data-size="S">S</span>
-                              <span class="size-button active" data-size="M">M</span>
-                              <span class="size-button" data-size="L">L</span>
-                              <span class="size-button" data-size="XL">XL</span>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="row2 d-flex gap-5 mt-3 ">
-                    <input type="number" #quantityInput="ngModel" [(ngModel)]="cart.quantity" name="quantity" id="quantity" value="1" min="1" max="10"/>
-
-                    <div class="btnn">
-                        <button class="btn btn-success" (click)="addToCart(sale.id , cart.quantity)">Add to cart</button>
-                    </div>
-                </div>
-
-                  <div class="delivery mt-3">
-                      <div class="one d-flex align-items-center gap-4 ps-3 pt-3" >
-                          <i class="fs-3 fa-solid fa-truck-fast m-0 p-0"></i>
-                          <div class="txt">
-                              <h6>Free Delivery</h6>
-                              <p class="p-0 m-0">Enter your postal code for Delivery Availability</p>
-                          </div>
-                      </div>
-                      <hr>
-                      <div class="two d-flex align-items-center gap-4 ps-3" >
-                          <i class="fs-3 fa-solid fa-rotate-left m-0 p-0"></i>
-                          <div class="txt">
-                              <h6>Return Delivery</h6>
-                              <p lass="p-0 m-0">Free 30 Days Delivery Returns. Details</p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
+    <div class="row justify-content-center gap-5">
+      <div class="lft col-lg-6 col-12">
+        <div class="imag" id="containerImg">
+          <img width="350" id="image" class="img-fluid" src="{{sale.image}}" alt="">
+        </div>
       </div>
+      <div class="rit col-lg-5 col-12">
+        <div class="txt">
+          <h2>{{sale.name}}</h2>
+          <span class="text-success fw-bold">In Stock</span>
+          <h5>{{sale.price}}$</h5>
+          <p>{{sale.description}}</p>
+          <hr>
+          <div class="sizes">
+            <div class="size-selector">
+              <span class="size-label">Size:</span>
+              <div class="size-options">
+                <span class="size-button" data-size="XS">XS</span>
+                <span class="size-button" data-size="S">S</span>
+                <span class="size-button active" data-size="M">M</span>
+                <span class="size-button" data-size="L">L</span>
+                <span class="size-button" data-size="XL">XL</span>
+              </div>
+            </div>
+          </div>
+          <div class="row2 d-flex gap-5 mt-3 ">
+            <input type="number" #quantityInput="ngModel" [(ngModel)]="cart.quantity" name="quantity" id="quantity"
+              value="1" min="1" max="10" />
+
+            <div class="btnn">
+              <button class="btn btn-success" (click)="addToCart(sale.id , cart.quantity)">Add to cart</button>
+            </div>
+          </div>
+
+          <div class="delivery mt-3">
+            <div class="one d-flex align-items-center gap-4 ps-3 pt-3">
+              <i class="fs-3 fa-solid fa-truck-fast m-0 p-0"></i>
+              <div class="txt">
+                <h6>Free Delivery</h6>
+                <p class="p-0 m-0">Enter your postal code for Delivery Availability</p>
+              </div>
+            </div>
+            <hr>
+            <div class="two d-flex align-items-center gap-4 ps-3">
+              <i class="fs-3 fa-solid fa-rotate-left m-0 p-0"></i>
+              <div class="txt">
+                <h6>Return Delivery</h6>
+                <p lass="p-0 m-0">Free 30 Days Delivery Returns. Details</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </main>
 <app-footer></app-footer>

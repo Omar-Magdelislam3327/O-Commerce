@@ -2,6 +2,7 @@ import { CartApiService } from 'src/app/controllers/cart-api.service';
 import { Carts } from 'src/app/modules/carts';
 import { Component, inject, TemplateRef } from '@angular/core';
 import { ModalDismissReasons, NgbDatepickerModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -10,36 +11,25 @@ import { ModalDismissReasons, NgbDatepickerModule, NgbModal } from '@ng-bootstra
 })
 export class CartComponent {
   cart !:any;
-  id!:any
-  constructor(private api : CartApiService) {
+  id!:any;
+  total !: any;
+  cartes = new Carts();
+  carte !:any
+  constructor(private api : CartApiService , private router : Router) {
     this.getCart();
   }
-
-  private modalService = inject(NgbModal);
-	closeResult = '';
-
-	open(content: TemplateRef<any>) {
-		this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then(
-			(result) => {
-				this.closeResult = `Closed with: ${result}`;
-			},
-			(reason) => {
-				this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-			},
-		);
-	}
-
-	private getDismissReason(reason: any): string {
-		switch (reason) {
-			case ModalDismissReasons.ESC:
-				return 'by pressing ESC';
-			case ModalDismissReasons.BACKDROP_CLICK:
-				return 'by clicking on a backdrop';
-			default:
-				return `with: ${reason}`;
-		}
-	}
+  ngOnInit(){
+    this.getTotal()
+  }
+  getTotal(){
+    this.total = 0;
+    for(let x in this.cart)
+      this.total += this.cart[x].price * this.cart[x].quantity;
+      console.log("TOTAL IS " + this.total);
+      console.log("CART IS ",this.cart);
+  }
   getCart(){
+    this.getTotal();
     this.api.get().subscribe((data:any)=>{
       this.cart = data;
     })
@@ -49,10 +39,10 @@ export class CartComponent {
       this.getCart();
     })
   }
-  update(id:any){
-    this.api.put(id , this.cart).subscribe((data:any)=>{
+  update(){
+    console.log("UPDATING");
+    this.api.put(this.id,this.cart).subscribe(()=>{
       location.reload();
-      console.log("updated");
     })
   }
 }

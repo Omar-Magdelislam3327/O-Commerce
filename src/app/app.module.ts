@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { ChartModule } from 'primeng/chart';
+import { ToastModule } from 'primeng/toast';
 // User
 // Shared
 import { NavComponent } from './user-panel/shared/nav/nav.component';
@@ -40,6 +41,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SwiperComponent } from './swiper/swiper.component';
 import { PieComponent } from './charts/pie/pie.component';
 import { BarsComponent } from './charts/bars/bars.component';
+import { ModalEditComponent } from './modal-edit/modal-edit.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +72,7 @@ import { BarsComponent } from './charts/bars/bars.component';
     SwiperComponent,
     PieComponent,
     BarsComponent,
+    ModalEditComponent,
 
   ],
   imports: [
@@ -79,7 +82,8 @@ import { BarsComponent } from './charts/bars/bars.component';
     HttpClientModule,
     NgbModule,
     InputNumberModule,
-    ChartModule
+    ChartModule,
+    ToastModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,12 @@
 .card{
-  background-color: #24303F !important;
+  background-color: #393E46 !important;
+  overflow-x: auto !important;
+  & p{
+    font-weight: 500;
+    font-size: 18px;
+  }
   & h3{
-    color: #94A3AD;
-    font-weight: bold;
+    color: #00ADB5;
+    font-weight: 900;
   }
 }
