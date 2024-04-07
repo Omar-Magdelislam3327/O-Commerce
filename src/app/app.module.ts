@@ -43,6 +43,7 @@ import { ModalEditComponent } from './modal-edit/modal-edit.component';
 import { LinestyleComponent } from './charts/linestyle/linestyle.component';
 @NgModule({
   declarations: [
+
     AppComponent,
     NavComponent,
     FooterComponent,
@@ -80,7 +81,7 @@ import { LinestyleComponent } from './charts/linestyle/linestyle.component';
     InputNumberModule,
     ChartModule,
     ToastModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

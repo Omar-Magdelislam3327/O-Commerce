@@ -22,7 +22,6 @@ const routes: Routes = [
   {path:"home" , component: HomeComponent , title:"O Commerce"},
   {path:"about" , component : AboutComponent , title:"O Commerce | About Us"},
   {path:"contact" , component:ContactComponent , title:"O  Commerce | Contact Us"},
-  {path:"details/:id" , component:ProductsDetailsComponent , title:"O   Commerce | Details"},
   {path:"products" , component:DiscountsComponent , title:"O  Commerce | Discounts"},
   {path:"show/:id" , component:DiscountsDetailsComponent , title:"O   Commerce | Details"},
   {path:"cart" , component:CartComponent , title:"O Commerce | Cart"},

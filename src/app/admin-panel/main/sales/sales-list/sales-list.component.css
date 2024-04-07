@@ -7,3 +7,6 @@ td{
 main{
   background-color: #1A222C !important;
 }
+body{
+  overflow: hidden;
+}
