@@ -4,11 +4,12 @@ import { CartApiService } from 'src/app/controllers/cart-api.service';
 import { SalesApiService } from 'src/app/controllers/sales-api.service';
 import { Carts } from 'src/app/modules/carts';
 import { Sales } from 'src/app/modules/sales';
-
+import { MessageService } from 'primeng/api';
 @Component({
   selector: 'app-discounts-details',
   templateUrl: './discounts-details.component.html',
-  styleUrls: ['./discounts-details.component.css']
+  styleUrls: ['./discounts-details.component.css'],
+  providers: [MessageService]
 })
 export class DiscountsDetailsComponent {
 
@@ -17,6 +18,24 @@ export class DiscountsDetailsComponent {
   sales !:any;
   cart = new Carts();
   ngOnInit(){
+    // let btn = document.getElementsByClassName( "addcart" )
+    //     btn = addEventListener( 'click', function(){
+    //         for(let i = 0; i < 50 ; i++){
+    //             let spark = document.createElement("i");
+    //             spark.classList.add("spark");
+    //             const randomX = (Math.random() - 0.5) * window.innerWidth;
+    //             const randomY = (Math.random() - 0.5) * window.innerHeight;
+    //             spark.style.setProperty("--x" , randomX + "px");
+    //             spark.style.setProperty("--y" , randomY + "px");
+    //             const randomSize = Math.random() * 8 + 2;
+    //             spark.style.width = randomSize + 'px'
+    //             spark.style.height = randomSize + 'px'
+    //             document.body.appendChild(spark);
+    //             setTimeout(() => {
+    //                 spark.remove();
+    //             }, 2000)
+    //         }
+    //     })
     let btns = document.querySelectorAll(`.btnsize`);
     function removeActiveClass(btns:any) {
       btns.forEach((btn : any) => btn.classList.remove('active'));
@@ -30,7 +49,7 @@ export class DiscountsDetailsComponent {
     });
     this.addToCart(this.cart.id , this.cart.quantity);
   }
-  constructor(private api : SalesApiService , private ActivatedRoute : ActivatedRoute , private apicart : CartApiService){
+  constructor(private api : SalesApiService , private ActivatedRoute : ActivatedRoute , private apicart : CartApiService , private messageService: MessageService){
     this.id = this.ActivatedRoute.snapshot.params['id'];
     this.api.getById(this.id).subscribe((data:any) =>{
       this.sale = data;
@@ -48,5 +67,7 @@ export class DiscountsDetailsComponent {
         })
       })
     })
+    this.messageService.add({ severity: 'success', summary: 'Done', detail: 'Successfully Added' });
   }
+
 }

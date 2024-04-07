@@ -13,8 +13,6 @@ export class CartComponent {
   cart !:any;
   id!:any;
   total !: any;
-  cartes = new Carts();
-  carte !:any
   constructor(private api : CartApiService , private router : Router) {
     this.getCart();
   }
@@ -39,11 +37,35 @@ export class CartComponent {
       this.getCart();
     })
   }
-  update(){
-    console.log("UPDATING");
-    this.api.put(this.id,this.cart).subscribe(()=>{
-      location.reload();
+  update(id:any , quantity:number){
+    this.api.getById(id).subscribe((data:any)=>{
+      data.quantity = quantity
+      this.api.put(id , data).subscribe((data:any)=>{
+      })
     })
   }
+  private modalService = inject(NgbModal);
+	closeResult = '';
+	openLg(content: TemplateRef<any>) {
+		this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' , size: 'lg' }).result.then(
+			(result) => {
+				this.closeResult = `Closed with: ${result}`;
+			},
+			(reason) => {
+				this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+			},
+		);
+	}
+
+	private getDismissReason(reason: any): string {
+		switch (reason) {
+			case ModalDismissReasons.ESC:
+				return 'by pressing ESC';
+			case ModalDismissReasons.BACKDROP_CLICK:
+				return 'by clicking on a backdrop';
+			default:
+				return `with: ${reason}`;
+		}
+	}
 }
 

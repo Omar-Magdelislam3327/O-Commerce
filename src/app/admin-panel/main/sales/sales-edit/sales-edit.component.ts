@@ -1,4 +1,4 @@
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Sales } from 'src/app/modules/sales';
 import { Component } from '@angular/core';
 import { SalesApiService } from 'src/app/controllers/sales-api.service';
@@ -11,7 +11,7 @@ import { SalesApiService } from 'src/app/controllers/sales-api.service';
 export class SalesEditComponent {
   sales = new Sales();
   id !:any;
-  constructor(private ActivatedRoute : ActivatedRoute , private api : SalesApiService){
+  constructor(private ActivatedRoute : ActivatedRoute , private api : SalesApiService , private router : Router){
     this.id =  ActivatedRoute.snapshot.params['id'];
     this.api.getById(this.id).subscribe((data:any) =>{
       this.sales= data
@@ -19,7 +19,7 @@ export class SalesEditComponent {
   }
   update(){
     this.api.put(this.id , this.sales).subscribe((data:any)=>{
-      location.reload();
+      this.router.navigateByUrl("/admin/products/list")
     })
   }
 }

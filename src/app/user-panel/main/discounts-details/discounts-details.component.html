@@ -31,7 +31,8 @@
               value="1" min="1" max="10" />
 
             <div class="btnn">
-              <button class="btn btn-success" (click)="addToCart(sale.id , cart.quantity)">Add to cart</button>
+              <p-toast></p-toast>
+              <button type="button" pButton pRipple class="btn btn-success addcart" (click)="addToCart(sale.id , cart.quantity)">Add to cart</button>
             </div>
           </div>
 

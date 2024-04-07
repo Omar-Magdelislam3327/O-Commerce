@@ -1,35 +1,39 @@
 <header>
   <div class="heading">
-      <p>Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!</p>
+    <p>Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!</p>
   </div>
-  <nav class="navbar navbar-expand-lg p-3">
-      <div class="container">
-          <a class="navbar-brand" routerLink="/home">O Commerce</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-              aria-label="Toggle navigation">
-              <i class="fa-solid fa-bars-staggered"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                      <a class="nav-link" aria-current="page" routerLink="/home">Home</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" routerLink="/contact">Contact</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" routerLink="/about">About</a>
-                  </li>
-              </ul>
-              <form class="d-flex align-items-center">
-                  <input class="form-controller me-2" type="search" placeholder="Search....">
-                  <div class="icon-cart">
-                      <i routerLink="/cart" class="fa-solid fa-cart-shopping"></i>
-                  </div>
+  <nav class="navbar navbar-expand-lg p-3 sticky-top">
+    <div class="container">
+      <a class="navbar-brand" routerLink="/home">O Commerce</a>
+      <div class="lft d-flex align-items-center gap-2 ">
+        <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars-staggered text-danger"></i>
+        </button>
+        <div class="icon-cart d-lg-none d-block">
+          <i routerLink="/cart" class="fa-solid fa-cart-shopping"></i>
+        </div>
 
-              </form>
-          </div>
       </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLink="/home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/about">About</a>
+          </li>
+        </ul>
+        <form class="d-flex align-items-center">
+          <input class="form-controller me-2" type="search" placeholder="Search....">
+          <div class="icon-cart d-lg-block d-none">
+            <i routerLink="/cart" class="fa-solid fa-cart-shopping"></i>
+          </div>
+        </form>
+      </div>
+    </div>
   </nav>
 </header>

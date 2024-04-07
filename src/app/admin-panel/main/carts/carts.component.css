@@ -1,6 +1,15 @@
-.statues{
-  color: orangered !important;
+.bg-orange {
+  background-color: orange;
 }
+
+.bg-green {
+  background-color: green;
+}
+
+.bg-red {
+  background-color: red;
+}
+
 td{
   color: #94A3B8 !important;
 }

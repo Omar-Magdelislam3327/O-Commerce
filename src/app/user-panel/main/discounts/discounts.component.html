@@ -3,9 +3,9 @@
   <section class="prod pt-5">
     <div class="container">
       <div class="title">
-        <h6>All Discounts</h6>
+        <h6>All Products</h6>
         <div class="flash d-flex align-items-center gap-3 mt-4">
-          <h3>Dive Into Our Discount Wonderland!</h3>
+          <h3>Explore Our Products</h3>
         </div>
       </div>
       <div class="row mt-3 align-items-center">
@@ -15,7 +15,7 @@
               <img class="img-fluid" src="{{sale.image}}" alt="">
             </div>
             <div class="sale">
-              <p>{{sale.discount}}%</p>
+              <p>{{sale.labelps}}</p>
             </div>
             <div class="show">
               <a routerLink="/show/{{sale.id}}"><i class="fa-solid fa-eye"></i></a>
@@ -29,9 +29,7 @@
               <i class="fa-solid fa-star"></i>
             </div>
             <div class="lower d-flex justify-content-between align-items-center">
-              <p class="p-0 m-0 text-danger fw-bold">{{sale.price}}$<span> {{sale.oldPrice}}$</span></p>
-              <input class="w-25" type="number" #quantity="ngModel" [(ngModel)]="sale.quantity" name="quantity" value="1" min="1" max="10"/>
-              <i class="fa-solid fa-cart-plus" (click)="addToCart(sale.id)"></i>
+              <p class="p-0 m-0 text-danger fw-bold">{{sale.price}} $<span> {{sale.oldPrice}}</span></p>
             </div>
           </div></div>
 

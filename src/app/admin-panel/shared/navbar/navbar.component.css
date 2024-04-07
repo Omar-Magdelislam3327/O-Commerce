@@ -1,6 +1,10 @@
 .admin{
-  background-color: #1A222C !important;
+  background-color: #0F172A !important;
+  border-bottom: aqua 1px solid;
 }
 .nav-link:hover{
   color: brown !important;
+}
+.fa-bars-staggered{
+  color: aqua;
 }

@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ListComponent } from './list.component';
+import { LinestyleComponent } from './linestyle.component';
 
-describe('ListComponent', () => {
-  let component: ListComponent;
-  let fixture: ComponentFixture<ListComponent>;
+describe('LinestyleComponent', () => {
+  let component: LinestyleComponent;
+  let fixture: ComponentFixture<LinestyleComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ListComponent]
+      declarations: [LinestyleComponent]
     });
-    fixture = TestBed.createComponent(ListComponent);
+    fixture = TestBed.createComponent(LinestyleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

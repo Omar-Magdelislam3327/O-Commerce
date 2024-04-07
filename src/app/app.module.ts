@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { ChartModule } from 'primeng/chart';
 import { ToastModule } from 'primeng/toast';
+import {BrowserAnimationsModule} from  '@angular/platform-browser/animations';
 // User
 // Shared
 import { NavComponent } from './user-panel/shared/nav/nav.component';
@@ -22,9 +23,6 @@ import { ProductsDetailsComponent } from './user-panel/main/products-details/pro
 import { NavbarComponent } from './admin-panel/shared/navbar/navbar.component';
 // Components
 import { DashboardComponent } from './admin-panel/main/dashboard/dashboard.component';
-import { ListComponent } from './admin-panel/main/products/list/list.component';
-import { AddComponent } from './admin-panel/main/products/add/add.component';
-import { EditComponent } from './admin-panel/main/products/edit/edit.component';
 import { from } from 'rxjs';
 import { SalesListComponent } from './admin-panel/main/sales/sales-list/sales-list.component';
 import { SalesEditComponent } from './admin-panel/main/sales/sales-edit/sales-edit.component';
@@ -42,7 +40,7 @@ import { SwiperComponent } from './swiper/swiper.component';
 import { PieComponent } from './charts/pie/pie.component';
 import { BarsComponent } from './charts/bars/bars.component';
 import { ModalEditComponent } from './modal-edit/modal-edit.component';
-
+import { LinestyleComponent } from './charts/linestyle/linestyle.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,9 +53,6 @@ import { ModalEditComponent } from './modal-edit/modal-edit.component';
     ProductsDetailsComponent,
     NavbarComponent,
     DashboardComponent,
-    ListComponent,
-    AddComponent,
-    EditComponent,
     SalesListComponent,
     SalesEditComponent,
     SalesAddComponent,
@@ -73,6 +68,7 @@ import { ModalEditComponent } from './modal-edit/modal-edit.component';
     PieComponent,
     BarsComponent,
     ModalEditComponent,
+    LinestyleComponent,
 
   ],
   imports: [
@@ -83,7 +79,8 @@ import { ModalEditComponent } from './modal-edit/modal-edit.component';
     NgbModule,
     InputNumberModule,
     ChartModule,
-    ToastModule
+    ToastModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

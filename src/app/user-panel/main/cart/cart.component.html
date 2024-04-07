@@ -20,17 +20,14 @@
           </th>
           <td class="text-danger fw-bold ">{{carts.price}}$</td>
           <td class="text-danger fw-bold ">
-            <p-inputNumber (change)="carts.quantity"  #quantity="ngModel" [(ngModel)]="carts.quantity" name="quantity" id="quantity"
+            <p-inputNumber (click)="update(carts.id , carts.quantity)"  #quantity="ngModel" [(ngModel)]="carts.quantity" name="quantity" id="quantity"
               [style]="{'width': '3rem'}" [showButtons]="true" buttonLayout="vertical" spinnerMode="vertical"
               inputId="vertical" decrementButtonClass="p-button-danger" incrementButtonClass="p-button-success"
               incrementButtonIcon="bi bi-plus" decrementButtonIcon="bi bi-dash-lg" >
             </p-inputNumber>
-            <!-- {{carts.quantity}} -->
           </td>
           <td class="text-danger fw-bold ">{{carts.price * carts.quantity}}$</td>
           <td>
-            <!-- <button (change)="update(carts.id)" class="btn btn-success"><i class="fa-solid fa-check"></i></button> -->
-            <button class="btn btn-success"><i class="fa-solid fa-edit"></i></button>
             <button (click)="remove(carts.id)" class="btn btn-danger ms-3"><i class="fa-solid fa-trash"></i></button>
           </td>
         </tr>
@@ -38,7 +35,47 @@
     </table>
     <div class="btns d-flex justify-content-between align-items-center">
       <button routerLink="/products" class="btn btn-outline-danger">Return To Shop</button>
+      <ng-template #content let-modal>
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+          <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <table class="table table-striped table-resposive">
+              <thead>
+                <tr>
+                  <th scope="col">Product</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Quantity</th>
+                  <th scope="col">Subtotal</th>
+                  <th colspan="2" scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let carts of cart">
+                  <th class="th-f">
+                    <img class="img-fluid" src="{{carts.image}}" alt="" />
+                  </th>
+                  <td class="text-danger fw-bold ">{{carts.price}}$</td>
+                  <td class="text-danger fw-bold ">
+                    {{carts.quantity}}
+                  </td>
+                  <td class="text-danger fw-bold ">{{carts.price * carts.quantity}}$</td>
+                  <td>
+                    <button (click)="remove(carts.id)" class="btn btn-danger ms-3"><i class="fa-solid fa-trash"></i></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-success" (click)="modal.close('Save click')">Confirm</button>
+        </div>
+      </ng-template>
 
+      <button class="btn btn-danger" (click)="openLg(content)">Proceed to Checkout</button>
     </div>
   </section>
   <section class="total mt-4 ">

@@ -1,13 +1,13 @@
 <app-navbar></app-navbar>
 <main id="dashboard">
-  <section class="section1">
+  <section class="section1 pt-5">
     <div class="container">
-      <div class="row pt-4 cards">
+      <div class="row cards">
         <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
           <div class="carde ">
             <div class="top d-flex justify-content-around p-lg-0 p-2 ">
               <div class="inner mt-2">
-                <h3 class="fw-bold text-white">7,461</h3>
+                <h3 class="fw-bold text-white">27,461</h3>
                 <p class=" text-white-50">Total Views</p>
               </div>
               <div class="icon mt-4">
@@ -15,7 +15,7 @@
               </div>
             </div>
             <div class="lower">
-              <p class="d-flex align-items-center text-center justify-content-end me-4 pb-3">0.34%<i
+              <p class="d-flex align-items-center text-center justify-content-end me-4 pb-3">34%<i
                   class="bi bi-arrow-up fw-bold"></i></p>
             </div>
           </div>
@@ -32,7 +32,7 @@
               </div>
             </div>
             <div class="lower">
-              <p class="d-flex align-items-center text-center justify-content-end me-4 pb-3">4.35%<i
+              <p class="d-flex align-items-center text-center justify-content-end me-4 pb-3">14.35%<i
                   class="bi bi-arrow-up fw-bold"></i></p>
             </div>
           </div>
@@ -42,14 +42,14 @@
             <div class="top d-flex justify-content-around p-lg-0 p-2 ">
               <div class="inner mt-2">
                 <h3 class="fw-bold text-white">2,450</h3>
-                <p class=" text-white-50">Total Product</p>
+                <p class=" text-white-50">Total Products</p>
               </div>
               <div class="icon mt-4">
                 <i class="bi bi-bag-dash-fill fs-1 text-white-50"></i>
               </div>
             </div>
             <div class="lower">
-              <p class="d-flex align-items-center text-center justify-content-end me-4 pb-3">2.59%%<i
+              <p class="d-flex align-items-center text-center justify-content-end me-4 pb-3">2.59%<i
                   class="bi bi-arrow-up fw-bold"></i></p>
             </div>
           </div>
@@ -58,7 +58,7 @@
           <div class="carde ">
             <div class="top d-flex justify-content-around p-lg-0 p-2 ">
               <div class="inner mt-2">
-                <h3 class="fw-bold text-white">3,456</h3>
+                <h3 class="fw-bold text-white">83,456</h3>
                 <p class=" text-white-50">Total Users</p>
               </div>
               <div class="icon mt-4">
@@ -74,7 +74,7 @@
       </div>
     </div>
   </section>
-  <section class="section2">
+  <section class="section2 ">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12">
@@ -150,7 +150,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="col-lg-6 col-md-6 col-sm-12 pt-lg-0 pt-md-0 pt-4">
           <div class="carded p-3">
             <div class="title pt-1">
               <h3 class="m-0 p-0  fw-bold">Order Statistics</h3>
@@ -226,50 +226,313 @@
       </div>
     </div>
   </section>
-  <section class="section3">
-    <div class="container py-5">
-      <div class="card text-light">
-        <div class="card-body table-responsive">
-          <div class="title">
-            <h3 class="pb-4">Recent Orders</h3>
-          </div>
-          <table class="table table-dark table-hover">
-            <thead>
-              <tr>
-                <th>Product Name</th>
-                <th>Product Category</th>
-                <th>Products Quantity</th>
-                <th>Cart Price</th>
-                <th>Statues</th>
-
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let cart of Carts" >
-                <td>{{cart.name}}</td>
-                <td>{{cart.category}}</td>
-                <td>{{cart.quantity}}</td>
-                <td>{{cart.price * cart.quantity}}  $</td>
-                <td class="statues">Pending</td>
-
-              </tr>
-            </tbody>
-          </table>
-        </div>
+  <section class="section3 pt-5">
+    <div class="container">
+      <div class="row">
+        <app-linestyle></app-linestyle>
       </div>
-
     </div>
   </section>
-  <section class="section4">
-    <div class="container ">
+  <section class="section4 ">
+    <div class="container py-5">
+      <div class="row gap-4 gap-lg-0">
+        <div class="col-lg-6 col-md-12 col-sm-12 messages" routerLink="/admin/messages">
+          <div class="card text-light">
+            <div class="card-body table-responsive">
+              <div class="title">
+                <h3 class="pb-4">Recent Messages</h3>
+              </div>
+              <table class="table table-dark table-striped">
+                <thead>
+                  <tr>
+                    <th>Product Name</th>
+                    <th>Product Category</th>
+                    <th>Products Quantity</th>
+                    <th>Cart Price</th>
+                    <th>Status</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let cart of Carts">
+                    <td>{{ cart.name }}</td>
+                    <td>{{ cart.category }}</td>
+                    <td>{{ cart.quantity }}</td>
+                    <td>{{ cart.price * cart.quantity }} $</td>
+                    <td>{{ cart.status }}</td>
+
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12 orders" routerLink="/admin/carts">
+          <div class="card text-light">
+            <div class="card-body table-responsive">
+              <div class="title">
+                <h3 class="pb-4">Recent Messages</h3>
+              </div>
+              <table class="table table-dark table-striped">
+                <thead>
+                  <tr>
+                    <th>User Name</th>
+                    <th>User Phone</th>
+                    <th>User email</th>
+                    <th>User Message</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let Message of message">
+                    <td>{{Message.name}}</td>
+                    <td>{{Message.phone}}</td>
+                    <td>{{Message.email}}</td>
+                    <td>{{Message.message}}</td>
+
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section5 ">
+    <div class="container">
       <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="carded p-3">
+            <div class="title pt-1">
+              <h3 class="m-0 p-0 fw-bold">Top Customers</h3>
+            </div>
+            <div class="card-body">
+              <ul class="p-0 mt-3">
+                <li class="d-flex mb-4 pb-1">
+                  <div class="d-flex w-100 flex-wrap align-items-center justify-content-between">
+                    <div class="d-flex gap-3 align-items-center">
+                      <img class="img-fluid" src="assets/vendors/imgs/user-1.png" alt="">
+                      <div class="txt">
+                        <h6 class="mb-0">Altan Düzyatan</h6>
+                        <small class="">99 Purchases</small>
+                      </div>
+                    </div>
+                    <div class="user-progress">
+                      <small class="fw-medium">1000 <span>USD</span></small>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <ul class="p-0 mt-3">
+                <li class="d-flex mb-4 pb-1">
+                  <div class="d-flex w-100 flex-wrap align-items-center justify-content-between">
+                    <div class="d-flex gap-3 align-items-center">
+                      <img class="img-fluid" src="assets/vendors/imgs/user-2.png" alt="">
+                      <div class="txt">
+                        <h6 class="mb-0">Viktor Gyokeres</h6>
+                        <small class="">90 Purchases</small>
+                      </div>
+                    </div>
+                    <div class="user-progress">
+                      <small class="fw-medium">700 <span>USD</span></small>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <ul class="p-0 mt-3">
+                <li class="d-flex mb-4 pb-1">
+                  <div class="d-flex w-100 flex-wrap align-items-center justify-content-between">
+                    <div class="d-flex gap-3 align-items-center">
+                      <img class="img-fluid" src="assets/vendors/imgs/user-3.png" alt="">
+                      <div class="txt">
+                        <h6 class="mb-0">Ziad Hamed</h6>
+                        <small class="">89 Purchases</small>
+                      </div>
+                    </div>
+                    <div class="user-progress">
+                      <small class="fw-medium">637.91<span>USD</span></small>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <ul class="p-0 mt-3">
+                <li class="d-flex mb-4 pb-1">
+                  <div class="d-flex w-100 flex-wrap align-items-center justify-content-between">
+                    <div class="d-flex gap-3 align-items-center">
+                      <img class="img-fluid" src="assets/vendors/imgs/user-5.png" alt="">
+                      <div class="txt">
+                        <h6 class="mb-0">Tarek Ibrahim</h6>
+                        <small class="">70 Purchases</small>
+                      </div>
+                    </div>
+                    <div class="user-progress">
+                      <small class="fw-medium">538.75<span>USD</span></small>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 pt-4 pt-lg-0 pt-md-0">
+          <div class="carded p-3">
+            <div class="title pt-1">
+              <h3 class="m-0 p-0 fw-bold">Top Countries By Sales</h3>
+            </div>
+            <h6 class="pt-3">$37,802 <i class="fa-solid fa-arrow-trend-up fs-3"></i> <span class="text-white"> 1.56%</span> since last weekend</h6>
+            <div class="card-body">
+              <ul class="p-0 mt-3">
+                <li class="d-flex mb-4 pb-1">
+                  <div class="d-flex w-100 flex-wrap align-items-center justify-content-between">
+                      <div class="d-flex align-items-center gap-2">
+                        <img src="assets/vendors/imgs/6.png" alt="">
+                        <h6 class="m-0 p-0">Turkey</h6>
+                      </div>
+                      <i class="fa-solid fa-arrow-trend-up fs-3"></i>
+                      <small class="fw-medium">16,972</small>
+                  </div>
+                </li>
+              </ul>
+              <ul class="p-0 mt-3">
+                <li class="d-flex mb-4 pb-1">
+                  <div class="d-flex w-100 flex-wrap align-items-center justify-content-between">
+                      <div class="d-flex align-items-center gap-2">
+                        <img src="assets/vendors/imgs/7.png" alt="">
+                        <h6 class="m-0 p-0">Belgium</h6>
+                      </div>
+                      <i class="fa-solid fa-arrow-trend-up fs-3"></i>
+                      <small class="fw-medium">11,583</small>
+                  </div>
+                </li>
+              </ul>
+              <ul class="p-0 mt-3">
+                <li class="d-flex mb-4 pb-1">
+                  <div class="d-flex w-100 flex-wrap align-items-center justify-content-between">
+                      <div class="d-flex align-items-center gap-2">
+                        <img src="assets/vendors/imgs/8.png" alt="">
+                        <h6 class="m-0 p-0">Sweden</h6>
+                      </div>
+                      <i class="fa-solid fa-arrow-trend-up fs-3"></i>
+                      <small class="fw-medium">7,241</small>
+                  </div>
+                </li>
+              </ul>
+              <ul class="p-0 mt-3">
+                <li class="d-flex mb-4 pb-1">
+                  <div class="d-flex w-100 flex-wrap align-items-center justify-content-between">
+                      <div class="d-flex align-items-center gap-2">
+                        <img src="assets/vendors/imgs/10.png" alt="">
+                        <h6 class="m-0 p-0">Australia</h6>
+                      </div>
+                      <i class="fa-solid fa-arrow-trend-down fs-3"></i>
+                      <small class="fw-medium">5,354</small>
+                  </div>
+                </li>
+              </ul>
+              <ul class="p-0 mt-3">
+                <li class="d-flex mb-4 pb-1">
+                  <div class="d-flex w-100 flex-wrap align-items-center justify-content-between">
+                      <div class="d-flex align-items-center gap-2">
+                        <img src="assets/vendors/imgs/11.png" alt="">
+                        <h6 class="m-0 p-0">Saudi</h6>
+                      </div>
+                      <i class="fa-solid fa-arrow-trend-down fs-3"></i>
+                      <small class="fw-medium">3,327</small>
+                  </div>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12 pt-4 pt-lg-0 pt-md-4 products">
+          <div class="carded p-3" routerLink="/admin/products/list">
+            <div class="title pt-1">
+              <h3 class="m-0 p-0 fw-bold">Top Products</h3>
+            </div>
+            <div class="card-body">
+              <ul class="p-0 mt-3">
+                <li class="d-flex mb-4 pb-1">
+                  <div class="d-flex w-100 flex-wrap align-items-center justify-content-between">
+                    <div class="d-flex gap-3 align-items-center">
+                      <img class="img-fluid" src="assets/vendors/imgs/1.png" alt="">
+                      <div class="txt">
+                        <h6 class="mb-0">Gucci Coat</h6>
+                        <small class="">100 Items</small>
+                      </div>
+                    </div>
+                    <div class="user-progress">
+                      <small class="fw-medium">+82.6 <span>USD</span></small>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <ul class="p-0 mt-3">
+                <li class="d-flex mb-4 pb-1">
+                  <div class="d-flex w-100 flex-wrap align-items-center justify-content-between">
+                    <div class="d-flex gap-3 align-items-center">
+                      <img class="img-fluid" src="assets/vendors/imgs/2.png" alt="">
+                      <div class="txt">
+                        <h6 class="mb-0">Adidas Coat</h6>
+                        <small class="">100 Items</small>
+                      </div>
+                    </div>
+                    <div class="user-progress">
+                      <small class="fw-medium">+270.69 <span>USD</span></small>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <ul class="p-0 mt-3">
+                <li class="d-flex mb-4 pb-1">
+                  <div class="d-flex w-100 flex-wrap align-items-center justify-content-between">
+                    <div class="d-flex gap-3 align-items-center">
+                      <img class="img-fluid" src="assets/vendors/imgs/3.png" alt="">
+                      <div class="txt">
+                        <h6 class="mb-0">IKEA Book Shelf</h6>
+                        <small class="">100 Items</small>
+                      </div>
+                    </div>
+                    <div class="user-progress">
+                      <small class="fw-medium">+637.91<span>USD</span></small>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <ul class="p-0 mt-3">
+                <li class="d-flex mb-4 pb-1">
+                  <div class="d-flex w-100 flex-wrap align-items-center justify-content-between">
+                    <div class="d-flex gap-3 align-items-center">
+                      <img class="img-fluid" src="assets/vendors/imgs/4.png" alt="">
+                      <div class="txt">
+                        <h6 class="mb-0">Realme 12 Pro Plus</h6>
+                        <small class="">100 Items</small>
+                      </div>
+                    </div>
+                    <div class="user-progress">
+                      <small class="fw-medium">+838.71<span>USD</span></small>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section6 pt-5">
+    <div class="container ">
+      <div class="row gap-4 gap-lg-0">
         <div class="col-lg-8 col-md-12 col-sm-12">
           <div class="card text-light">
             <div class="card-body table-responsive">
               <div class="title">
                 <h3 class="pb-4">Top Channels</h3>
               </div>
-              <table class="table table-dark table-striped">
+              <table class="table table-dark table-hover">
                 <thead>
                   <tr>
                     <th>SOURCE</th>
@@ -352,7 +615,7 @@
       </div>
     </div>
   </section>
-  <section class="section5 mt-5">
+  <section class="section7 pt-5">
     <div class="container">
       <div class="row">
         <app-bars></app-bars>

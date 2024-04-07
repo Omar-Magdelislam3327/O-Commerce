@@ -1,12 +1,15 @@
 .card{
-  background-color: #393E46 !important;
+  background-color: #1E293B !important;
   overflow-x: auto !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   & p{
     font-weight: 500;
     font-size: 18px;
   }
   & h3{
-    color: #00ADB5;
+    color: aqua;
     font-weight: 900;
   }
 }

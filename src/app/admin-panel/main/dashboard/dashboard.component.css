@@ -1,5 +1,5 @@
 main{
-  background-color: #222831 !important;
+  background-color: #0F172A !important;
 }
 .statues{
   color: orangered !important;
@@ -12,7 +12,7 @@ td{
   color: #94A3B8 !important;
 }
 .card{
-  background-color: #393E46 !important;
+  background-color: #1E293B !important;
   overflow-x: auto !important;
   & p{
     font-weight: 500;
@@ -20,7 +20,7 @@ td{
   }
 }
 .carde{
-  background-color: #393E46 !important;
+  background-color: #1E293B !important;
   color: rgb(174 183 192) !important;
   border: none;
   border-radius: 10px;
@@ -43,20 +43,24 @@ td{
 
 .carde:hover{
   box-shadow: 0px 0px 20px rgba(56, 57, 58, 0.486);
-  transform: scale(1.1);
+  filter: brightness(100%);
 }
 .cards:hover .carde:not(:hover) {
-  transform: scale(1);
-  filter: blur(2px);
+  filter: brightness(70%);
 }
-
+.fa-arrow-trend-up{
+  color: #00FF66;
+}
+.fa-arrow-trend-down{
+  color: #DB4444;
+}
 .carded{
-  background-color: #393E46 !important;
+  background-color: #1E293B !important;
   border: none;
   border-radius: 10px;
 
-  & .txt h6 , h3{
-    color: #00ADB5;
+  & h6{
+    color: aquamarine;
   }
   & small{
     color: #858B93;
@@ -151,8 +155,25 @@ td{
   }
 }
 
+table{
+  & tr:first-child th:first-child{
+    border-top-left-radius: 10px;
+  }
+  & tr:first-child th:last-child{
+    border-top-right-radius: 10px;
+  }
+  & tr:last-child td:first-child{
+    border-bottom-left-radius: 10px;
+  }
+  & tr:last-child td:last-child{
+    border-bottom-right-radius: 10px;
+  }
+}
 
   h3{
-    color: #00ADB5;
+    color: aqua;
     font-weight: 900;
+  }
+  .orders , .messages , .products{
+    cursor: pointer;
   }

@@ -10,20 +10,24 @@
               <th>Product Category</th>
               <th>Products Quantity</th>
               <th>Cart Price</th>
-              <th>Statues</th>
+              <th>Status</th>
               <th colspan="2">Actions</th>
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let cart of Carts" >
-              <td>{{cart.name}}</td>
-              <td>{{cart.category}}</td>
-              <td>{{cart.quantity}}</td>
-              <td>{{cart.price}}  $</td>
-              <td class="statues">Pending</td>
+            <tr *ngFor="let cart of Carts" [ngClass]="{
+              'bg-orange': cart.status === 'Pending',
+              'bg-green': cart.status === 'Chipped',
+              'bg-red': cart.status === 'Cancelled'
+            }">
+              <td>{{ cart.name }}</td>
+              <td>{{ cart.category }}</td>
+              <td>{{ cart.quantity }}</td>
+              <td>{{ cart.price * cart.quantity }} $</td>
+              <td>{{ cart.status }}</td>
               <td>
-                <a onclick="done()"  class="btn btn-success me-3 doneBtn"><i class="fa-solid fa-check"></i></a>
-                <a  class="btn btn-danger me-3 cancelbtn"><i class="fa-solid fa-xmark"></i></a>
+                <a (click)="changeStatus(cart, 'Chipped')" class="btn btn-success me-3"><i class="fa-solid fa-check"></i></a>
+                <a (click)="changeStatus(cart, 'Cancelled')" class="btn btn-danger me-3"><i class="fa-solid fa-xmark"></i></a>
               </td>
             </tr>
           </tbody>
@@ -31,5 +35,4 @@
       </div>
     </div>
   </div>
-
 </main>

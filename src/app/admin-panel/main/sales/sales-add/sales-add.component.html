@@ -3,7 +3,7 @@
   <div class="container py-4 col-lg-6 col-md-8 col-sm-10 col-12">
     <div class="card text-light">
       <div class="card-body">
-        <h2 class="text-success text-center">Add New Sale</h2>
+        <h2 class="text-success text-center">Add New Product</h2>
         <form>
 
           <div class="form-group mt-2">
@@ -16,8 +16,8 @@
               <input #price="ngModel" [(ngModel)]="sales.price" type="text" class="form-control shadow-none" name="price" id="price" placeholder="Enter Price" required />
             </div>
             <div class="form-group col-lg-4 col-12">
-              <label class="form-label">Product's Discount</label>
-              <input #discount="ngModel" [(ngModel)]="sales.discount" type="url" class="form-control shadow-none" name="discount" id="discount" placeholder="Enter Discount" required />
+              <label class="form-label">Product's Label</label>
+              <input #label="ngModel" [(ngModel)]="sales.labelps" type="text" class="form-control shadow-none" name="label" id="label" placeholder="Enter Label" required />
             </div>
             <div class="form-group col-lg-3 col-12">
               <label class="form-label">Product's Old price</label>
@@ -31,14 +31,14 @@
           </div>
           <div class="form-group mt-2">
             <label class="form-label">Product's Category</label>
-            <input #name="ngModel" [(ngModel)]="sales.category" type="text" class="form-control shadow-none" name="category" id="category" placeholder="Enter Product Category" required />
+            <input #category="ngModel" [(ngModel)]="sales.category" type="text" class="form-control shadow-none" name="category" id="category" placeholder="Enter Product Category" required />
           </div>
           <div class="form-group mt-2 ">
             <label class="form-label">Product's Description</label>
             <textarea #description="ngModel" [(ngModel)]="sales.description" class="form-control shadow-none" id="description" name="description" cols="30" rows="5" placeholder="Description" required> </textarea>
           </div>
           <div class="form-group mt-2 text-center">
-            <button (click)="submit()" type="submit" class="btn btn-primary" [disabled]="name.invalid || price.invalid || old.invalid || image.invalid">Add Sale</button>
+            <button (click)="submit()" type="submit" class="btn btn-primary" [disabled]="name.invalid || price.invalid || label.invalid || image.invalid || category.invalid || description.invalid">Add Product</button>
           </div>
         </form>
       </div>

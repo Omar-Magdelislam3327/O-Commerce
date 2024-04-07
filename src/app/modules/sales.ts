@@ -6,6 +6,6 @@ export class Sales{
   image!:string;
   category!:string;
   description!:string;
-  discount!:number;
   quantity!:number;
+  labelps!:string;
 }
