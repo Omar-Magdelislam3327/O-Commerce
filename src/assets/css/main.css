@@ -1382,6 +1382,7 @@ footer {
   outline: none;
   border: none;
   filter: drop-shadow(0 0 15px rgba(0, 0, 0, .5));
+  overflow: hidden;
 }
 
 .spark {

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ProductsApiService } from 'src/app/controllers/products-api.service';
 import { SalesApiService } from 'src/app/controllers/sales-api.service';
+import { Sales } from 'src/app/modules/sales';
 
 @Component({
   selector: 'app-home',
@@ -9,13 +9,11 @@ import { SalesApiService } from 'src/app/controllers/sales-api.service';
 })
 export class HomeComponent {
   sales !:any;
-  products !:any;
-  constructor(public api : ProductsApiService , public apis : SalesApiService){
+  displayedProducts!: Sales[];
+  constructor( public apis : SalesApiService){
     this.apis.get().subscribe((data:any)=>{
       this.sales = data;
+      this.displayedProducts = data.slice(0, 4);
     });
-    this.api.get().subscribe((res:any)=>{
-      this.products = res;
-    })
   }
 }

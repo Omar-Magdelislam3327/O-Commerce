@@ -1,5 +1,6 @@
 main{
   background-color: #0F172A !important;
+  user-select: none;
 }
 .statues{
   color: orangered !important;
@@ -43,10 +44,10 @@ td{
 
 .carde:hover{
   box-shadow: 0px 0px 20px rgba(56, 57, 58, 0.486);
-  filter: brightness(100%);
+  filter: brightness(120%);
 }
 .cards:hover .carde:not(:hover) {
-  filter: brightness(70%);
+  filter: brightness(100%);
 }
 .fa-arrow-trend-up{
   color: #00FF66;

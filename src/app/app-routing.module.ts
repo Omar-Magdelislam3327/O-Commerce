@@ -31,9 +31,9 @@ const routes: Routes = [
 
       {path:"products" ,
     children:[
-      {path:"list" , component:SalesListComponent , title:"Admin | Sales List"},
-      {path:"add" , component:SalesAddComponent , title:"Admin | Add Sale "},
-      {path:"edit/:id" , component:SalesEditComponent , title:"Admin | Edit Sale"}
+      {path:"list" , component:SalesListComponent , title:"Admin | Products List"},
+      {path:"add" , component:SalesAddComponent , title:"Admin | Add Product "},
+      {path:"edit/:id" , component:SalesEditComponent , title:"Admin | Edit Product"}
     ]
       },
       {path:"messages" , component:MessagesComponent , title:"Admin | Messages"},
