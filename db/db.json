@@ -35,7 +35,35 @@
       "labelps": "New"
     }
   ],
-  "carts": [],
+  "carts": [
+    {
+      "name": "Havic HV G-92 Gamepad",
+      "price": "192.00",
+      "labelps": "Top Selling",
+      "category": "gaming",
+      "description": "PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive.",
+      "image": "assets\\vendors\\imgs\\ps.png",
+      "image2": "assets\\vendors\\imgs\\ps1.png",
+      "image3": "assets\\vendors\\imgs\\ps2.png",
+      "image4": "assets\\vendors\\imgs\\ps3.png",
+      "id": 6,
+      "quantity": 2
+    },
+    {
+      "name": "Realme 12 Pro Plus",
+      "price": "375",
+      "labelps": "Top Selling",
+      "oldPrice": "",
+      "description": "Realme 12 Pro Plus is a flagship smartphone known for its advanced features and performance. It typically boasts a high-quality display, powerful processor, impressive camera setup, fast charging capabilities, and sleek design. With a focus on providing excellent value for money, the Realme 12 Pro Plus offers cutting-edge technology and innovative features, making it a competitive option in the smartphone market.",
+      "category": "Mobile",
+      "image": "assets\\vendors\\imgs\\realme-12-pro-plus-1.jpg",
+      "id": 4,
+      "image2": "assets\\vendors\\imgs\\realme-12-pro-plus-2.jpg",
+      "image3": "assets\\vendors\\imgs\\realme-12-pro-plus-3.jpg",
+      "image4": "assets\\vendors\\imgs\\realme-12-pro-plus-launched-003.png",
+      "quantity": 2
+    }
+  ],
   "sales": [
     {
       "description": "A Gucci coat is a high-end outerwear garment known for its luxury materials, impeccable tailoring, and iconic design elements. They often feature signature Gucci patterns, tailored silhouettes, embellishments, and statement accents. Crafted from premium fabrics like wool, cashmere, or silk, Gucci coats embody sophistication and elegance while offering versatility for both everyday wear and special occasions.",
@@ -75,20 +103,39 @@
       "price": "375",
       "labelps": "Top Selling",
       "oldPrice": "",
-      "description": "\nRealme 12 Pro Plus is a flagship smartphone known for its advanced features and performance. It typically boasts a high-quality display, powerful processor, impressive camera setup, fast charging capabilities, and sleek design. With a focus on providing excellent value for money, the Realme 12 Pro Plus offers cutting-edge technology and innovative features, making it a competitive option in the smartphone market.",
+      "description": "Realme 12 Pro Plus is a flagship smartphone known for its advanced features and performance. It typically boasts a high-quality display, powerful processor, impressive camera setup, fast charging capabilities, and sleek design. With a focus on providing excellent value for money, the Realme 12 Pro Plus offers cutting-edge technology and innovative features, making it a competitive option in the smartphone market.",
       "category": "Mobile",
-      "image": "assets\\vendors\\imgs\\Realme-12-pro-plus-5g-submarine-blue-12gb-256gb-ram-Back-View.png",
-      "id": 4
+      "image": "assets\\vendors\\imgs\\realme-12-pro-plus-1.jpg",
+      "id": 4,
+      "image2": "assets\\vendors\\imgs\\realme-12-pro-plus-2.jpg",
+      "image3": "assets\\vendors\\imgs\\realme-12-pro-plus-3.jpg",
+      "image4": "assets\\vendors\\imgs\\realme-12-pro-plus-launched-003.png",
+      "quantity": 2
     },
     {
-      "name": "omar",
-      "price": "21",
-      "labelps": "10%",
-      "oldPrice": "23",
-      "image": "assets\\vendors\\imgs\\sam-moghadam-khamseh-kvmdsTrGOBM-unsplash 1.png",
-      "category": "Clothes",
-      "description": "x",
-      "id": 5
+      "name": "Havic HV G-92 Gamepad",
+      "price": "192.00",
+      "labelps": "Top Selling",
+      "category": "gaming",
+      "description": "PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive.",
+      "image": "assets\\vendors\\imgs\\image 63 (1).png",
+      "image2": "assets\\vendors\\imgs\\ps1.png",
+      "image3": "assets\\vendors\\imgs\\ps2.png",
+      "image4": "assets\\vendors\\imgs\\ps3.png",
+      "id": 6,
+      "quantity": 1
+    },
+    {
+      "name": "Playstation 5",
+      "price": "100",
+      "labelps": "Hot",
+      "image": "assets\\vendors\\imgs\\image 63.png",
+      "image2": "assets\\vendors\\imgs\\psall.jpg",
+      "image3": "assets\\vendors\\imgs\\psall1.jpg",
+      "image4": "assets\\vendors\\imgs\\psall2.jpg",
+      "category": "gaming",
+      "description": "The PlayStation 5 (PS5) represents Sony's pinnacle of gaming technology, offering a seamless blend of power, performance, and innovation. With its striking design, powered by a custom AMD Zen 2 processor and RDNA 2 GPU, the PS5 delivers breath taking visuals and lightning-fast load times. The revolutionary Dual Sense controller brings new levels of immersion with haptic feedback and adaptive triggers. Dive into a vast library of exclusive games, including beloved franchises and new adventures, all while enjoying the convenience of backward compatibility and robust online features. Whether you're a casual gamer or a hardcore enthusiast, the PS5 offers an unparalleled gaming experience that's sure to captivate and inspire.",
+      "id": 7
     }
   ],
   "feedback": [

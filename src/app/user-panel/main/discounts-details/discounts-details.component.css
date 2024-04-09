@@ -5,4 +5,10 @@ input[type="number"]{
   outline: none;
   text-align: center;
 }
-
+.imeg{
+  background-color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}

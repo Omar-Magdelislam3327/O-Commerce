@@ -4,6 +4,9 @@ export class Sales{
   price!:number;
   oldPrice!:number;
   image!:string;
+  image2!:string;
+  image3!:string;
+  image4!:string;
   category!:string;
   description!:string;
   quantity!:number;

@@ -12,12 +12,12 @@ import { MessageService } from 'primeng/api';
   providers: [MessageService]
 })
 export class DiscountsDetailsComponent {
-
+[x: string]: any;
   id !: any;
   sale = new Sales();
-  sales !:any;
+  sales !: any;
   cart = new Carts();
-  ngOnInit(){
+  ngOnInit() {
     // let btn = document.getElementsByClassName( "addcart" )
     //     btn = addEventListener( 'click', function(){
     //         for(let i = 0; i < 50 ; i++){
@@ -36,34 +36,58 @@ export class DiscountsDetailsComponent {
     //             }, 2000)
     //         }
     //     })
+    const mainImage: HTMLImageElement | null = document.getElementById("mainImage") as HTMLImageElement;
+    const smallImages: HTMLCollectionOf<HTMLImageElement> = document.getElementsByClassName("image") as HTMLCollectionOf<HTMLImageElement>;
+
+    if (mainImage) {
+      smallImages[0].onclick = () => {
+        mainImage.src = smallImages[0].src;
+      }
+
+      smallImages[1].onclick = () => {
+        mainImage.src = smallImages[1].src;
+      }
+
+      smallImages[2].onclick = () => {
+        mainImage.src = smallImages[2].src;
+      }
+
+      smallImages[3].onclick = () => {
+        mainImage.src = smallImages[3].src;
+      }
+
+      smallImages[4].onclick = () => {
+        mainImage.src = smallImages[4].src;
+      }
+    }
     let btns = document.querySelectorAll(`.btnsize`);
-    function removeActiveClass(btns:any) {
-      btns.forEach((btn : any) => btn.classList.remove('active'));
+    function removeActiveClass(btns: any) {
+      btns.forEach((btn: any) => btn.classList.remove('active'));
     }
     const sizeButtons = document.querySelectorAll('.size-button');
     sizeButtons.forEach(sizeButton => {
       sizeButton.addEventListener('click', () => {
-          removeActiveClass(sizeButtons);
-          sizeButton.classList.add('active');
+        removeActiveClass(sizeButtons);
+        sizeButton.classList.add('active');
       });
     });
-    this.addToCart(this.cart.id , this.cart.quantity);
+    this.addToCart(this.cart.id, this.cart.quantity);
   }
-  constructor(private api : SalesApiService , private ActivatedRoute : ActivatedRoute , private apicart : CartApiService , private messageService: MessageService){
+  constructor(private api: SalesApiService, private ActivatedRoute: ActivatedRoute, private apicart: CartApiService, private messageService: MessageService) {
     this.id = this.ActivatedRoute.snapshot.params['id'];
-    this.api.getById(this.id).subscribe((data:any) =>{
+    this.api.getById(this.id).subscribe((data: any) => {
       this.sale = data;
     })
-    this.apicart.getById(this.id).subscribe((data:any)=>{
-      this.cart=data;
+    this.apicart.getById(this.id).subscribe((data: any) => {
+      this.cart = data;
     })
   }
-  addToCart(id:any , quantity : number){
-    this.api.getById(id).subscribe((data:any)=>{
+  addToCart(id: any, quantity: number) {
+    this.api.getById(id).subscribe((data: any) => {
       data.quantity = quantity;
-      this.api.put(id , data).subscribe((data:any)=>{
-        this.apicart.post(data).subscribe((data:any)=>{
-          this.cart=data;
+      this.api.put(id, data).subscribe((data: any) => {
+        this.apicart.post(data).subscribe((data: any) => {
+          this.cart = data;
         })
       })
     })

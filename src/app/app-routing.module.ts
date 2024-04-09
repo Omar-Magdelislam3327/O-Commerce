@@ -22,7 +22,7 @@ const routes: Routes = [
   {path:"home" , component: HomeComponent , title:"O Commerce"},
   {path:"about" , component : AboutComponent , title:"O Commerce | About Us"},
   {path:"contact" , component:ContactComponent , title:"O  Commerce | Contact Us"},
-  {path:"products" , component:DiscountsComponent , title:"O  Commerce | Discounts"},
+  {path:"products" , component:DiscountsComponent , title:"O  Commerce | Products"},
   {path:"show/:id" , component:DiscountsDetailsComponent , title:"O   Commerce | Details"},
   {path:"cart" , component:CartComponent , title:"O Commerce | Cart"},
   {path:"admin",
