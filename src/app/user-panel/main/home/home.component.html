@@ -3,7 +3,7 @@
   <section class="hero pb-2" >
       <div class="container">
           <div class="row justify-content-between">
-              <div class="col-lg-2 col-10 order-lg-1 order-2 d-lg-block d-none" >
+              <div class="col-lg-2 col-10 order-lg-1 order-2 d-lg-block d-none" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
                   <p class="mt-2 pt-2">Woman's Fashion</p>
                   <p class="mt-2 p-0">Men's Fashion</p>
                   <p class="mt-2 p-0">Electronics</p>
@@ -14,7 +14,7 @@
                   <p class="mt-2 p-0">Groceries & Pets</p>
                   <p class="mt-2 p-0">Health & Beauty</p>
               </div>
-              <div class="col-lg-10 col-12 order-lg-2 order-1 pt-3">
+              <div class="col-lg-10 col-12 order-lg-2 order-1 pt-3"  data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
                 <app-swiper></app-swiper>
               </div>
           </div>
@@ -23,14 +23,14 @@
   <!--  -->
   <section class="sales mt-5">
       <div class="container pt-4">
-          <div class="title" >
+          <div class="title" data-aos="fade-down" data-aos-duration="500" data-aos-delay="400">
               <h6>Our Products</h6>
               <div class="flash d-flex align-items-center gap-3 mt-4">
                   <h2>Explore Our Products</h2>
               </div>
           </div>
           <div class="row d-flex mt-3">
-            <div class="col-lg-3 col-md-6 col-sm-12 mt-2 mt-lg-0" *ngFor="let sale of sales ; let i = index">
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-2 mt-lg-0" *ngFor="let sale of sales ; let i = index" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="500">
               <div class="carde" *ngIf="i<4">
                 <div class="back text-center">
                   <img class="img-fluid" src="{{sale.image}}" alt="">
@@ -63,40 +63,40 @@
   <!--  -->
   <section class="categories mt-5">
       <div class="container">
-          <div class="title" >
+          <div class="title" data-aos="fade-down" data-aos-duration="500" data-aos-delay="400">
               <h6>Categories</h6>
               <h2>Browse By Category</h2>
           </div>
           <div class="row mt-3 justify-content-around">
-              <div class="carde col-xl-2 col-lg-5 col-md-5 col-sm-5 col-10 m-1" >
+              <div class="carde col-xl-2 col-lg-5 col-md-5 col-sm-5 col-10 m-1"  data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500">
                   <div class="back text-center">
                       <i class="fs-1 bi bi-phone"></i>
                       <h3>Phones</h3>
                   </div>
 
               </div>
-              <div class="carde col-xl-2 col-lg-5 col-md-5 col-sm-5 col-10 m-1" >
+              <div class="carde col-xl-2 col-lg-5 col-md-5 col-sm-5 col-10 m-1"  data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">
                   <div class="back text-center">
                       <i class="fs-1 bi bi-pc-display-horizontal"></i>
                       <h3>Computers</h3>
                   </div>
 
               </div>
-              <div class="carde col-xl-2 col-lg-5 col-md-5 col-sm-5 col-10 m-1" >
+              <div class="carde col-xl-2 col-lg-5 col-md-5 col-sm-5 col-10 m-1"  data-aos="fade-left" data-aos-duration="1000" data-aos-delay="700">
                   <div class="back text-center">
                       <i class="fs-1 bi bi-headphones"></i>
                       <h3>Headphones</h3>
                   </div>
 
               </div>
-              <div class="carde col-xl-2 col-lg-5 col-md-5 col-sm-5 col-10 m-1">
+              <div class="carde col-xl-2 col-lg-5 col-md-5 col-sm-5 col-10 m-1" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">
                   <div class="back text-center">
                       <i class="fs-1 bi bi-smartwatch"></i>
                       <h3>Smart Watch</h3>
                   </div>
 
               </div>
-              <div class="carde col-xl-2 col-lg-5 col-md-5 col-sm-5 col-10 m-1">
+              <div class="carde col-xl-2 col-lg-5 col-md-5 col-sm-5 col-10 m-1" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="900">
                   <div class="back text-center">
                       <i class="fs-1 bi bi-camera"></i>
                       <h3>Camera</h3>
@@ -117,7 +117,7 @@
                   <h6>Categories</h6>
                   <h2 class="text-white fs-1 mt-3">Enhance Your Music Experience</h2>
 
-                  <button class="buy-btn mt-3">Buy Now</button>
+                  <button routerLink="/show/9" class="buy-btn mt-3">Buy Now</button>
               </div>
           </div>
       </div>
@@ -172,16 +172,16 @@
           </div>
           <div class="row justify-content-between align-items-center flex-wrap mt-5">
               <div class="imag1 col-xl-6 col-12 m-0">
-                  <img class=" img-fluid" routerLink="/products" src="assets/vendors/imgs/Frame 684.png" alt="">
+                  <img class=" img-fluid" routerLink="/show/7" src="assets/vendors/imgs/Frame 684.png" alt="">
               </div>
               <div class="imag2 col-xl-6 col-12 mt-xl-0 mt-2">
-                  <img class="img-fluid" routerLink="/products" src="assets/vendors/imgs/Frame 685.png" alt="">
+                  <img class="img-fluid" routerLink="/show/14" src="assets/vendors/imgs/Frame 685.png" alt="">
                   <div class="lftbtm d-flex gap-4 mt-xl-4 mt-2">
                       <div class="imag3">
-                          <img class="img-fluid" routerLink="/products" src="assets/vendors/imgs/Frame 686.png" alt="">
+                          <img class="img-fluid" routerLink="/show/9" src="assets/vendors/imgs/Frame 686.png" alt="">
                       </div>
                       <div class="imag4">
-                          <img class="img-fluid" routerLink="/products" src="assets/vendors/imgs/Frame 687.png" alt="">
+                          <img class="img-fluid" routerLink="/show/16" src="assets/vendors/imgs/Frame 687.png" alt="">
                       </div>
                   </div>
               </div>
@@ -214,3 +214,6 @@
 
 </main>
 <app-footer></app-footer>
+<script>
+  AOS.init();
+</script>

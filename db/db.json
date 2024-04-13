@@ -1,68 +1,5 @@
 {
-  "products": [
-    {
-      "id": 1,
-      "name": "Gucci duffle bag",
-      "price": " 950.00",
-      "image": "assets/vendors/imgs/Gucci-Savoy-medium-duffle-bag-1.png",
-      "category": "Women's Accessories",
-      "labelps": "Top Selling",
-      "description": "Savoy Small GG Supreme duffle bag in multicoloured - Gucci | Mytheresa. A historic interpretation of founder Guccio Gucci's initials, GG Supreme canvas is a key fabric at the house of Gucci. It's the foundation for the Savoy Small duffle bag, along with the iconic Web stripe, leather trims, and gold-toned GG hardware."
-    },
-    {
-      "id": 2,
-      "name": "Playstation 5",
-      "price": " 500.00",
-      "image": "assets/vendors/imgs/image 63.png",
-      "category": "Gaming",
-      "labelps": "New",
-      "description": "The latest Sony PlayStation introduced in November 2020. Powered by an eight-core AMD Zen 2 CPU and custom AMD Radeon GPU, the PS5 is offered in two models: with and without a 4K Blu-ray drive. Supporting a 120Hz video refresh, the PS5 is considerably more powerful than the PS4 and PS4 Pro."
-    },
-    {
-      "id": 3,
-      "name": "ASUS FHD Gaming Laptop",
-      "price": " 750.00",
-      "image": "assets/vendors/imgs/Cart (2).png",
-      "category": "Electronics",
-      "labelps": "New"
-    },
-    {
-      "id": 4,
-      "name": "IPS LCD Gaming Monitor",
-      "price": " 1266.00",
-      "image": "assets/vendors/imgs/Frame 613.png",
-      "category": "Electronics",
-      "labelps": "New"
-    }
-  ],
   "carts": [
-    {
-      "name": "Havic HV G-92 Gamepad",
-      "price": "192.00",
-      "labelps": "Top Selling",
-      "category": "gaming",
-      "description": "PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive.",
-      "image": "assets\\vendors\\imgs\\ps.png",
-      "image2": "assets\\vendors\\imgs\\ps1.png",
-      "image3": "assets\\vendors\\imgs\\ps2.png",
-      "image4": "assets\\vendors\\imgs\\ps3.png",
-      "id": 6,
-      "quantity": 2
-    },
-    {
-      "name": "Realme 12 Pro Plus",
-      "price": "375",
-      "labelps": "Top Selling",
-      "oldPrice": "",
-      "description": "Realme 12 Pro Plus is a flagship smartphone known for its advanced features and performance. It typically boasts a high-quality display, powerful processor, impressive camera setup, fast charging capabilities, and sleek design. With a focus on providing excellent value for money, the Realme 12 Pro Plus offers cutting-edge technology and innovative features, making it a competitive option in the smartphone market.",
-      "category": "Mobile",
-      "image": "assets\\vendors\\imgs\\realme-12-pro-plus-1.jpg",
-      "id": 4,
-      "image2": "assets\\vendors\\imgs\\realme-12-pro-plus-2.jpg",
-      "image3": "assets\\vendors\\imgs\\realme-12-pro-plus-3.jpg",
-      "image4": "assets\\vendors\\imgs\\realme-12-pro-plus-launched-003.png",
-      "quantity": 2
-    }
   ],
   "sales": [
     {
@@ -85,7 +22,10 @@
       "category": "Clothes",
       "description": "A Adidas jacket is a premium piece of outerwear synonymous with luxury and style. Known for its exceptional craftsmanship and attention to detail, a Adidas jacket typically features high-quality materials like leather, suede, or luxurious fabrics such as silk and wool. They often showcase iconic Adidas motifs, tailored fits, and statement accents like bold prints or embellishments. Whether it's a classic leather biker jacket or a contemporary bomber style, Adidas jackets effortlessly combine sophistication with edgy flair, making them a coveted addition to any fashion-forward wardrobe.",
       "id": 2,
-      "quantity": 3
+      "quantity": 4,
+      "image2": "assets\\vendors\\imgs\\jacket1.png",
+      "image3": "assets\\vendors\\imgs\\jacket2.png",
+      "image4": "assets\\vendors\\imgs\\jacket3.png"
     },
     {
       "description": "\nAn IKEA office setup is characterized by modern, functional furniture tailored for efficient workspaces. It typically includes desks like the LINNMON or BEKANT series, ergonomic chairs such as MARKUS or MILLBERGET, storage solutions like cabinets and shelves, lighting options such as desk lamps or overhead fixtures, and accessories like cable management systems and desk organizers. These elements combine affordability with contemporary design to create comfortable and productive work environments.",
@@ -110,7 +50,7 @@
       "image2": "assets\\vendors\\imgs\\realme-12-pro-plus-2.jpg",
       "image3": "assets\\vendors\\imgs\\realme-12-pro-plus-3.jpg",
       "image4": "assets\\vendors\\imgs\\realme-12-pro-plus-launched-003.png",
-      "quantity": 2
+      "quantity": 5
     },
     {
       "name": "Havic HV G-92 Gamepad",
@@ -127,7 +67,7 @@
     },
     {
       "name": "Playstation 5",
-      "price": "100",
+      "price": "1000",
       "labelps": "Hot",
       "image": "assets\\vendors\\imgs\\image 63.png",
       "image2": "assets\\vendors\\imgs\\psall.jpg",
@@ -135,24 +75,113 @@
       "image4": "assets\\vendors\\imgs\\psall2.jpg",
       "category": "gaming",
       "description": "The PlayStation 5 (PS5) represents Sony's pinnacle of gaming technology, offering a seamless blend of power, performance, and innovation. With its striking design, powered by a custom AMD Zen 2 processor and RDNA 2 GPU, the PS5 delivers breath taking visuals and lightning-fast load times. The revolutionary Dual Sense controller brings new levels of immersion with haptic feedback and adaptive triggers. Dive into a vast library of exclusive games, including beloved franchises and new adventures, all while enjoying the convenience of backward compatibility and robust online features. Whether you're a casual gamer or a hardcore enthusiast, the PS5 offers an unparalleled gaming experience that's sure to captivate and inspire.",
-      "id": 7
+      "id": 7,
+      "quantity": 6
+    },
+    {
+      "name": "Oppo Reno 10 Pro +",
+      "price": "100",
+      "labelps": "New",
+      "image": "assets\\vendors\\imgs\\opoo1.jpg",
+      "category": "Mobile",
+      "description": "Flagship smartphone known for its sleek design, powerful performance, and advanced camera system. It features a large, vibrant display, high-performance processor, versatile camera setup with multiple lenses, fast charging capabilities, and the latest connectivity options like 5G support. Overall, it offers a premium user experience with a focus on photography and multimedia.",
+      "id": 8,
+      "image2": "assets\\vendors\\imgs\\opoo2.jpg",
+      "image3": "assets\\vendors\\imgs\\oppo3.jpg"
+    },
+    {
+      "name": "JBL Boombox 2",
+      "price": "500",
+      "oldPrice": "750",
+      "labelps": "25%",
+      "image": "assets\\vendors\\imgs\\jbl.jpg",
+      "image2": "assets\\vendors\\imgs\\jbl2.jpg",
+      "image3": "assets\\vendors\\imgs\\jbl3.jpg",
+      "image4": "assets\\vendors\\imgs\\jbl4.jpg",
+      "category": "Electronics",
+      "description": "The JBL Boombox 2 is a portable Bluetooth speaker known for its powerful sound, long battery life, and rugged design. It's waterproof, has a built-in handle for easy carrying, and offers connectivity options like Bluetooth, 3.5mm audio jack, and USB ports. It's also compatible with JBL's Party Boost feature for connecting multiple speakers wirelessly.",
+      "id": 9
+    },
+    {
+      "name": "Iphone 15 Pro",
+      "price": "500",
+      "labelps": "New",
+      "image": "assets\\vendors\\imgs\\iphone.jpg",
+      "image2": "assets\\vendors\\imgs\\iphone1.jpg",
+      "image3": "assets\\vendors\\imgs\\iphone2.jpg",
+      "image4": "assets\\vendors\\imgs\\iphone3.jpg",
+      "category": "Mobile",
+      "description": "The iPhone 15 Pro is Apple's latest flagship smartphone, featuring a sleek design, advanced Super Retina XDR display, powerful A-series chip, ground breaking camera system, blazing-fast 5G connectivity, robust security features, all-day battery life, and seamless iOS experience.",
+      "id": 10
+    },
+    {
+      "name": "Marvo HG9068 ",
+      "price": "20",
+      "image": "assets\\vendors\\imgs\\head.jpg",
+      "image2": "assets\\vendors\\imgs\\head1.jpg",
+      "image3": "assets\\vendors\\imgs\\head2.jpg",
+      "image4": "assets\\vendors\\imgs\\head3.jpg",
+      "category": "gaming",
+      "description": "Marvo earphones are designed for gamers and audio enthusiasts, featuring immersive audio, comfortable designs, durable construction, in-line microphones, noise isolation, compatibility with various devices, and stylish aesthetics.",
+      "labelps": "10%",
+      "oldPrice": "30",
+      "id": 11
+    },
+    {
+      "image3": "assets\\vendors\\imgs\\stock\\FEAR-OF-GOD-ESSENTIALS-3D-Silicon-Applique-Pullover-Hoodie-Buttercream-2-Photoroom.png-Photoroom.png",
+      "image2": "assets\\vendors\\imgs\\stock\\FEAR-OF-GOD-ESSENTIALS-3D-Silicon-Applique-Pullover-Hoodie-Buttercream-Photoroom.png-Photoroom.png",
+      "image": "assets\\vendors\\imgs\\stock\\Fear-of-God-Essentials-Hoodie-Black-2-Photoroom.png-Photoroom.png",
+      "image4": "assets\\vendors\\imgs\\stock\\Fear-of-God-Essentials-Hoodie-Black-Photoroom.png-Photoroom.png",
+      "description": "The Fear of God Essentials Hoodie is a minimalist yet stylish staple in streetwear fashion, known for its clean design, comfortable fabric, and versatility. With subtle branding and high-quality construction, it's perfect for creating casual, fashionable looks.",
+      "category": "Clothes",
+      "name": "Fear of God Essentials Hoodie",
+      "price": "60",
+      "labelps": "10%",
+      "oldPrice": "80",
+      "id": 13,
+      "quantity": 4
+    },
+    {
+      "name": "Rabanne H&M Embellished Chiffon Dress",
+      "price": "517",
+      "labelps": "New",
+      "image": "assets\\vendors\\imgs\\stock\\Rabanne-HM-Embellished-Chiffon-Dress-Black-Photoroom.png-Photoroom.png",
+      "image2": "assets\\vendors\\imgs\\stock\\Rabanne-HM-Embellished-Chiffon-Dress-Black-2-Photoroom.png-Photoroom.png",
+      "image3": "assets\\vendors\\imgs\\stock\\Rabanne-HM-Embellished-Chiffon-Dress-Black-3-Photoroom.png-Photoroom.png",
+      "image4": "assets\\vendors\\imgs\\stock\\Rabanne-HM-Embellished-Chiffon-Dress-Black-Photoroom.png-Photoroom.png",
+      "category": "Clothes",
+      "description": "The Rabanne H&M Embellished Chiffon Dress blends Paco Rabanne's futuristic style with H&M's accessibility. It features metallic embellishments on flowing chiffon, offering a chic yet affordable statement piece for various occasions.",
+      "id": 14
+    },
+    {
+      "name": "Gucci GG Supreme Key Pouch",
+      "price": "259",
+      "labelps": "New",
+      "image": "assets\\vendors\\imgs\\stock\\Gucci-GG-Supreme-Key-Pouch-Beige-Ebony-2-Photoroom.png-Photoroom.png",
+      "image2": "assets\\vendors\\imgs\\stock\\Gucci-GG-Supreme-Key-Pouch-Beige-Ebony-Photoroom.png-Photoroom.png",
+      "image3": "assets\\vendors\\imgs\\stock\\Gucci-GG-Supreme-Key-Pouch-Beige-Ebony-3-Photoroom.png-Photoroom.png",
+      "image4": "assets\\vendors\\imgs\\stock\\Gucci-GG-Supreme-Key-Pouch-Beige-Ebony-2-Photoroom.png-Photoroom.png",
+      "category": "Accessories",
+      "description": "The Gucci GG Supreme Key Pouch is a stylish and practical accessory crafted from the brand's iconic GG Supreme canvas. It offers a compact design for securely holding keys and small essentials, boasting impeccable craftsmanship and timeless appeal.",
+      "id": 15,
+      "quantity": 4
+    },
+    {
+      "image": "assets\\vendors\\imgs\\stock\\ysl_dmi_fram_y_edp-intense_packshot_side_100ml_3000x3000px_3614273898478_rgb_1-Photoroom.png-Photoroom.png",
+      "image2": "assets\\vendors\\imgs\\stock\\ysl_dmi_fram_y_edp-intense_packshot_threequarter_100ml_3614273898478_rgb_1-Photoroom.png-Photoroom.png",
+      "image3": "assets\\vendors\\imgs\\stock\\ysl_dmi_fram_y_edp-intense_packshot_with-box_threequarter_100ml_3000x3000px_3614273898478_rgb_1-Photoroom.png-Photoroom.png",
+      "image4": "assets\\vendors\\imgs\\stock\\_ysl_dmi_fram_y_edp-intense-23_digital-still-life_ingredients_square_3000x3000px_rgb_1-Photoroom.png-Photoroom.png",
+      "category": "Perfumes ",
+      "name": "Y EAU DE PARFUM INTENSE-60 ML",
+      "price": "24",
+      "labelps": "New",
+      "description": "Y Eau de Parfum Intense, a refined fragrance, enhances the original Y Eau de Toilette with a deeper and longer-lasting aroma. It combines fresh notes like bergamot with warm spices and woody accords, resulting in a confident and sophisticated scent perfect for any occasion.",
+      "id": 16,
+      "quantity": 6
     }
   ],
   "feedback": [
-    {
-      "name": "omar",
-      "phone": "0198765",
-      "email": "omagd206@gmail.com",
-      "message": "sssssssssssssss",
-      "id": 1
-    },
-    {
-      "name": "d",
-      "email": "01501883344",
-      "phone": "0198765",
-      "message": "rrrrrrrrrr",
-      "id": 2
-    }
+
   ],
   "admin": [
     {

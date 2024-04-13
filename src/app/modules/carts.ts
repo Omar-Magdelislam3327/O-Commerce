@@ -4,4 +4,5 @@ export class Carts{
   price!:number;
   image!:string;
   quantity:number = 1;
+  coupon!:string;
 }

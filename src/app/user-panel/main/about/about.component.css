@@ -1,0 +1,8 @@
+.team{
+  .carde:hover{
+    transform: translateY(-10px);
+  }
+}
+main{
+  overflow-x: hidden !important;
+}

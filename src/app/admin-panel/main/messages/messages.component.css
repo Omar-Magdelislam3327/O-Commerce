@@ -6,4 +6,5 @@ td{
 }
 main{
   background-color: #1A222C !important;
+  min-height: 92vh;
 }

@@ -1,5 +1,5 @@
 <app-nav></app-nav>
-<main id="contact">
+<main id="contact" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
   <!--  -->
   <section class="up">
       <div class="container">
@@ -16,7 +16,7 @@
   <!--  -->
   <div class="container">
       <div class="row justify-content-around gap-5 mt-5">
-          <div class="lft col-lg-3 col-12">
+          <div class="lft col-lg-3 col-10">
               <div class="up">
                   <div class="title d-flex align-items-center gap-3">
                       <i class="fs-5 fa-solid fa-phone"></i>
@@ -40,7 +40,7 @@
                   </div>
               </div>
           </div>
-          <div class="rit col-lg-8 col-12">
+          <div class="rit col-lg-8 col-10">
               <form class="row g-3 needs-validation" novalidate>
                   <div class="col-md-4">
                       <input type="text" placeholder="*Your Name"  class="form-control" #name="ngModel" [(ngModel)]="message.name" name="name" id="name">
@@ -61,7 +61,6 @@
                   </div>
               </form>
           </div>
-
       </div>
   </div>
   <!--  -->

@@ -2,7 +2,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { ProductsApiService } from 'src/app/controllers/products-api.service';
 import { Products } from 'src/app/modules/products';
-
+import { Sales } from 'src/app/modules/sales';
+import * as AOS from 'aos';
 @Component({
   selector: 'app-products-details',
   templateUrl: './products-details.component.html',
@@ -12,6 +13,8 @@ export class ProductsDetailsComponent {
   product = new Products();
   id !: any;
   ngOnInit() {
+    AOS.init()
+    window.addEventListener('load' , AOS.refresh)
     let btns = document.querySelectorAll(`.btnsize`);
     function removeActiveClass(btns:any) {
       btns.forEach((btn : any) => btn.classList.remove('active'));

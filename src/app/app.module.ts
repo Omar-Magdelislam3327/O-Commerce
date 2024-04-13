@@ -70,7 +70,6 @@ import { LinestyleComponent } from './charts/linestyle/linestyle.component';
     BarsComponent,
     ModalEditComponent,
     LinestyleComponent,
-
   ],
   imports: [
     BrowserModule,

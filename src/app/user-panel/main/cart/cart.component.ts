@@ -3,6 +3,7 @@ import { Carts } from 'src/app/modules/carts';
 import { Component, inject, TemplateRef } from '@angular/core';
 import { ModalDismissReasons, NgbDatepickerModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-cart',
@@ -12,25 +13,30 @@ import { Router } from '@angular/router';
 export class CartComponent {
   cart !:any;
   id!:any;
-  total !: any;
+  allPrice!: any;
+  minValue: number = 1;
+  maxValue: number = 20;
   constructor(private api : CartApiService , private router : Router) {
     this.getCart();
   }
   ngOnInit(){
-    this.getTotal()
-  }
-  getTotal(){
-    this.total = 0;
-    for(let x in this.cart)
-      this.total += this.cart[x].price * this.cart[x].quantity;
-      console.log("TOTAL IS " + this.total);
-      console.log("CART IS ",this.cart);
+    AOS.init()
+    window.addEventListener('load' , AOS.refresh)
   }
   getCart(){
-    this.getTotal();
     this.api.get().subscribe((data:any)=>{
       this.cart = data;
+      this.allPrice = 0;
+      for(let i = 0 ; i < this.cart.length ; i++){
+      const numPrice = (this.cart[i].price * this.cart[i].quantity);
+      this.allPrice  = numPrice + this.allPrice;
+      }
     })
+  }
+  copounTotal(){
+    if(this.cart.coupon === "omar3327"){
+      this.allPrice = this.allPrice - 500;
+    }
   }
   remove(id:any){
     this.api.delete(id).subscribe((data:any)=>{

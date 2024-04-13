@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CartApiService } from 'src/app/controllers/cart-api.service';
 import { SalesApiService } from 'src/app/controllers/sales-api.service';
 import { Carts } from 'src/app/modules/carts';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-discounts',
@@ -17,7 +18,9 @@ export class DiscountsComponent {
     })
   }
   ngOnInit(){
-    this.addToCart(this.cart.id)
+    this.addToCart(this.cart.id);
+    AOS.init()
+    window.addEventListener('load' , AOS.refresh)
   }
   addToCart(id:any){
     this.apicart.getById(id).subscribe((data : any)=>{

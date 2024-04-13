@@ -1,8 +1,7 @@
 <app-nav></app-nav>
-<main id="cart">
-
-  <section class="data p-5">
-    <table class="table table-striped table-resposive">
+<main id="cart" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="500">
+  <section class="data p-5 table-responsive">
+    <table class="table table-striped">
       <thead>
         <tr>
           <th scope="col">Product</th>
@@ -15,15 +14,15 @@
       <tbody>
         <tr *ngFor="let carts of cart">
           <th class="th-f">
-            <img class="img-fluid" src="{{carts.image}}" alt="" />
+            <img width="200" class="img-fluid" src="{{carts.image}}" alt="" />
             <p class="text-danger">{{carts.name}}</p>
           </th>
           <td class="text-danger fw-bold ">{{carts.price}}$</td>
           <td class="text-danger fw-bold ">
-            <p-inputNumber (click)="update(carts.id , carts.quantity)"  #quantity="ngModel" [(ngModel)]="carts.quantity" name="quantity" id="quantity"
+            <p-inputNumber (click)="update(carts.id , carts.quantity)" #quantity="ngModel" [(ngModel)]="carts.quantity" name="quantity" id="quantity"
               [style]="{'width': '3rem'}" [showButtons]="true" buttonLayout="vertical" spinnerMode="vertical"
               inputId="vertical" decrementButtonClass="p-button-danger" incrementButtonClass="p-button-success"
-              incrementButtonIcon="bi bi-plus" decrementButtonIcon="bi bi-dash-lg" >
+              incrementButtonIcon="bi bi-plus" decrementButtonIcon="bi bi-dash-lg" [min]="minValue" [max]="maxValue">
             </p-inputNumber>
           </td>
           <td class="text-danger fw-bold ">{{carts.price * carts.quantity}}$</td>
@@ -38,7 +37,7 @@
       <ng-template #content let-modal>
         <div class="modal-header">
           <h4 class="modal-title" id="modal-basic-title">Billing Details</h4>
-          <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+          <button type="button" class="btn-close shadow-none" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
         </div>
         <div class="modal-body">
           <form>
@@ -55,7 +54,7 @@
               <tbody>
                 <tr *ngFor="let carts of cart">
                   <th class="th-f">
-                    <img class="img-fluid" src="{{carts.image}}" alt="" />
+                    <img width="200" class="img-fluid" src="{{carts.image}}" alt="" />
                   </th>
                   <td class="text-danger fw-bold ">{{carts.price}}$</td>
                   <td class="text-danger fw-bold ">
@@ -83,12 +82,12 @@
       <div class="row">
         <div class="col-lg-8">
           <div class="copun d-flex flex-wrap gap-3">
-            <input type="text" class="form-control w-25" placeholder="Coupon Code">
-            <button class="btn btn-danger">Apply Coupon</button>
+            <input #coupon="ngModel" [(ngModel)]="cart.coupon" name="coupon" id="coupon" type="text" class="form-control w-25" placeholder="Coupon Code">
+            <button (click)="copounTotal()" class="btn btn-danger">Apply Coupon</button>
           </div>
         </div>
-        <div class="col-lg-4">
-          <div class="totalBox border border-danger p-3">
+        <div class="col-lg-4 mt-lg-0 mt-3">
+          <div class="totalBox p-3">
             <div class="title">
               <h3 class="fw-bold">Cart Total:</h3>
             </div>
@@ -97,7 +96,7 @@
                 <p>Subtotal : </p>
               </div>
               <div class="nums">
-                {{total}} $
+                {{allPrice}} $
               </div>
             </div>
             <hr>
@@ -115,15 +114,13 @@
                 <p>Total : </p>
               </div>
               <div class="nums">
-                {{total}} $
+                {{allPrice}} $
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
-
 </main>
 <app-footer></app-footer>

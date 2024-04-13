@@ -1,30 +1,70 @@
-.counter #decreaseBtn {
-  padding: 6px 15px;
-  font-size: 15px;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  background-color: var(--hover);
-  color: black;
-  transition:  0.3s;
+.totalBox{
+  border: 1px solid black;
+  border-radius: 8px;
 }
-.counter #decreaseBtn:hover {
-  background-color: var(--primary);
+.form-control {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #DB4444;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  background-clip: padding-box;
+  border: var(--bs-border-width) solid #DB4444;
+  border-radius: var(--bs-border-radius);
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
 }
-.counter #increaseBtn {
-  border: none;
-  border-radius: 5px;
-  padding: 6px 15px;
-  font-size: 15px;
-  cursor: pointer;
-  background-color: var(--primary);
-  color: #fff;
-  transition: 0.3s;
+
+@media (prefers-reduced-motion:reduce) {
+  .form-control {
+      transition: none
+  }
 }
-.counter #increaseBtn:hover {
-  background-color: var(--hover);
+
+.form-control[type=file] {
+  overflow: hidden
 }
-.counter span {
-  margin: 0 20px;
-  font-size: 20px;
+
+.form-control[type=file]:not(:disabled):not([readonly]) {
+  cursor: pointer
 }
+
+.form-control:focus {
+  color: #DB4444;;
+  background-color: transparent;
+  border-color: #DB4444;
+  outline: 0;
+  box-shadow: none
+}
+
+.form-control::-webkit-date-and-time-value {
+  min-width: 85px;
+  height: 1.5em;
+  margin: 0
+}
+
+.form-control::-webkit-datetime-edit {
+  display: block;
+  padding: 0
+}
+
+.form-control::-moz-placeholder {
+  color: var(--bs-secondary-color);
+  opacity: 1
+}
+
+.form-control::placeholder {
+  color: #858B93;
+  opacity: 1
+}
+
+.form-control:disabled {
+  background-color: var(--bs-secondary-bg);
+  opacity: 1
+}
+
